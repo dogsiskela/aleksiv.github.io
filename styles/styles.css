@@ -23,6 +23,7 @@ body {
     color: #ee8434da;
     user-select: none;
     border: 5px solid #ee8434;
+    transition: 0.3s;
 }
 
 .slider {
@@ -36,6 +37,7 @@ body {
     pointer-events: none;
     user-select: none;
     backface-visibility: hidden;
+    ;
 }
 
 .left {
