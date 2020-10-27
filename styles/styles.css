@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Gagalin;
+    src: url("/assets/fonts/Gagalin-Regular.otf");
+}
+
+body {
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    border-radius: .5rem;
+}
+
+.right {
+    position: absolute;
+    background-image: url("/assets/forum.jpg");
+    background-size: 100vmax;
+    background-position: center;
+    box-shadow: inset 0 0 0 100vmax #2b4162ab;
+    color: #ee8434da;
+    user-select: none;
+}
+
+.slider {
+    width: 70vw;
+    overflow: hidden;
+    display: inline-block;
+    transform: skewX(8deg);
+    transition: width 0.4s ease-in-out;
+    margin-left: -20vw;
+    color: #2b4162;
+    pointer-events: none;
+    user-select: none;
+}
+
+.left {
+    overflow: hidden;
+    transform: skewX(20deg);
+    margin-left: 0px;
+    background-image: url("/assets/radio.jpg");
+    background-size: 85vmax;
+    background-position: left;
+    box-shadow: inset 0 0 0 100vmax #ee8434a6;
+    pointer-events: auto;
+}
+
+.slider:hover {
+    color: white;
+    width: 75vw;
+}
+
+.right:hover+.slider {
+    width: 60vw;
+}
+
+.right:hover {
+    color: white;
+}
+
+.content-area {
+    text-align: left;
+    position: absolute;
+    top: 40vh;
+    font-family: Gagalin;
+    font-size: 7vw;
+}
+
+.right-allign {
+    right: 20vw;
+}
+
+.left-allign {
+    text-align: left;
+    right: 45vw;
+    transform: skewX(-27deg);
+}
+
+.left-allign:hover {
+    margin: auto;
+    color: #ffffff;
+    background-size: 0 100%;
+}
