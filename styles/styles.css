@@ -118,18 +118,18 @@ body {
 }
 
 .loader-r {
-    border-top: 16px solid #2b4162; /* Blue */
+    border-top: 1vw solid #2b4162; /* Blue */
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 7.5vw;
+    height: 7.5vw;
     animation: spin 2s linear infinite;
     align-self: center;
   }
   .loader-f { 
-    border-top: 16px solid #eb8d45; /* Blue */
+    border-top: 1vw solid #eb8d45; /* Blue */
     border-radius: 50%;
-    width: 8vw;
-    height: 8vw;
+    width: 7.5vw;
+    height: 7.5vw;
     animation: spin 2s linear infinite;
     align-self: center;
   }
