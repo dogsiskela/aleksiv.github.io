@@ -1,10 +1,40 @@
+/* GENERAL */
+
 @font-face {
     font-family: Gagalin;
     src: url("/assets/fonts/Gagalin-Regular.otf");
 }
 
+@font-face {
+    font-family: Ruso;
+    src: url("/assets/fonts/RussoOne-Regular.ttf");
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+
+*::-webkit-scrollbar-track {
+    background: #37392E;
+}
+
+/* Handle */
+
+*::-webkit-scrollbar-thumb {
+    background: #eb8d45;
+}
+
+/* Handle on hover */
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* MAIN PAGE STYLES */
+
 body {
-    overflow: hidden;
     margin-top: 0;
 }
 
@@ -21,7 +51,7 @@ body {
     background-position: center;
     box-shadow: inset 0 0 0 100vmax #2b4162ab;
     color: #ee8434da;
-    user-select: none;
+    cursor:pointer;
     border: 5px solid #ee8434;
     transition: 0.3s;
 }
@@ -35,9 +65,8 @@ body {
     margin-left: -20vw;
     color: #2b4162;
     pointer-events: none;
-    user-select: none;
+    cursor:pointer;
     backface-visibility: hidden;
-    ;
 }
 
 .left {
@@ -50,7 +79,7 @@ body {
     box-shadow: inset 0 0 0 100vmax #ee8434a6;
     pointer-events: auto;
     border: 5px solid #2b4162;
-    transition:0.3s;
+    transition: 0.3s;
 }
 
 .slider:hover {
@@ -118,23 +147,162 @@ body {
 }
 
 .loader-r {
-    border-top: 1vw solid #2b4162; /* Blue */
+    border-top: 1vw solid #2b4162;
+    /* Blue */
     border-radius: 50%;
     width: 7.5vw;
     height: 7.5vw;
     animation: spin 2s linear infinite;
     align-self: center;
-  }
-  .loader-f { 
-    border-top: 1vw solid #eb8d45; /* Blue */
+}
+
+.loader-f {
+    border-top: 1vw solid #eb8d45;
+    /* Blue */
     border-radius: 50%;
     width: 7.5vw;
     height: 7.5vw;
     animation: spin 2s linear infinite;
     align-self: center;
-  }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* FORUM STYLES  */
+
+.forum-background {
+    overflow-x: hidden;
+    background-color: #ebebeb;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+.forum-head {
+    margin: 0;
+    height: 40vh;
+    width: 100vw;
+    background-color: rgb(20, 20, 20);
+}
+
+.forum-head-navigation {
+    display: flex;
+    left: 20vw;
+    width: 60vw;
+    justify-content: space-between;
+    margin-bottom: 5vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.forum-head-navigation-items {
+    position: relative;
+    right: -30vw;
+    color: white;
+    font-size: 1.2vw;
+    font-family: Ruso;
+    user-select: none;
+    transition: 0.2s;
+    padding: 2.6vh 15px 15px 10px
+}
+
+.forum-head-navigation-items:hover {
+    color: #eb8d45;
+    transition: 0.2s;
+    user-select: none;
+    cursor: pointer;
+}
+
+.forum-head-navigation-items:after {
+    display: block;
+    content: '';
+    border-bottom: solid 3px #eb8d45;
+    transform: scaleX(0);
+    transition: transform 200ms ease-out;
+}
+
+.forum-head-navigation-items:hover:after {
+    transform: scaleX(0.1);
+}
+
+.logo-icon {
+    cursor: pointer;
+    margin-top: 1.5vh;
+    margin-left: 4vw;
+    margin-right: -2.8vw;
+    background-size: 5vh;
+    background-repeat: no-repeat;
+    background-image: url("/assets/LogoW.png");
+    width: 5vh;
+    height: 5vh;
+}
+
+.logo-text {
+    position: absolute;
+    left: 7vw;
+    width: auto;
+    max-width: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: 2.2vh;
+    color: #eb8d45;
+    font-size: 1.4vw;
+    font-family: Gagalin;
+    user-select: none;
+    cursor: pointer;
+    animation: zero-width 4s linear;
+}
+
+#logo:hover+.logo-text {
+    animation: max-width 4s linear;
+}
+
+@keyframes max-width {
+    0% {
+        max-width: 0;
+    }
+    10% {
+        max-width: 10vw;
+    }
+}
+
+@keyframes zero-width {
+    0% {
+        max-width: 10vw;
+    }
+    10% {
+        max-width: 0vw;
+    }
+}
+
+.header-image {
+    position: relative;
+    left: 27.5vw;
+    margin-top: 8vh;
+    background-size: 100vh;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-image: url("/assets/record-player.jpg");
+    width: 45vw;
+    height: 65vh;
+    transition: 0.5s;
+}
+
+.header-image:hover {
+    box-shadow: inset 0 0 0 100vmax rgba(255, 255, 255, 0.082);
+    transition: 0.5s;
+}
+
+.album-of-week {
+    position: absolute;
+    top: 40vh;
+    right: 4vw;
+}
