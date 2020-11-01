@@ -236,7 +236,7 @@ body {
 
 .logo-icon {
     cursor: pointer;
-    margin-top: 1.5vh;
+    margin-top: 2vh;
     margin-left: 4vw;
     margin-right: -2.8vw;
     background-size: 5vh;
@@ -253,7 +253,7 @@ body {
     max-width: 0%;
     white-space: nowrap;
     overflow: hidden;
-    margin-top: 2.2vh;
+    margin-top: 2.7vh;
     color: #eb8d45;
     font-size: 1.4vw;
     font-family: Gagalin;
@@ -286,9 +286,9 @@ body {
 
 .header-image-container {
     gap: 100px;
-    margin-top: 5vh;
+    margin-top: 3vh;
     display: grid;
-    grid-template-areas: 'image title' 'image description';
+    grid-template-areas: 'image title' 'image description' 'image meta';
     grid-template-columns: 49vw 50vw;
     grid-template-rows: 40%;
 }
@@ -297,12 +297,12 @@ body {
     grid-area: image;
     position: relative;
     left: 4vw;
-    background-size: 125vh;
+    background-size: 130vh;
     background-position-x: center;
     background-repeat: no-repeat;
     background-image: url("/assets/record-player.jpg");
     width: 52vw;
-    height: 83vh;
+    height: 85vh;
     transition: 0.5s;
     font-size: 3vw;
 }
@@ -314,6 +314,9 @@ body {
 
 .header-image-title {
     overflow: hidden;
+    position: absolute;
+    top: 10%;
+    left:56%;
     padding: 20vh 1.5vw;
     font-family: Ruso;
     font-size: 3vw;
@@ -322,37 +325,61 @@ body {
     cursor: pointer;
 }
 
+.header-image-title:after {
+    display: block;
+    content: '';
+    margin-top: 3vh;
+    border-bottom: solid 3px #eb8d45;
+    width: 70%;
+    transition: transform 200ms ease-out;
+}
+
 .header-image-description {
     grid-area: description;
-    width: 100%;
+    position: absolute;
+    right: 1vw;
+    top: 55%;
+    width: 40%;
+    word-wrap: break-word;
     padding: 1vh 1vw;
-    background-color: white;
+    float: warp 1px;
+    color: white;
     font-size: 1.3vw;
     font-family: RobotoR;
 }
-
-.carousel-button-l {
-    color: white;
-    margin: 0 1vw;
+.header-image-meta {
+    grid-area: meta;
     position: absolute;
-    left: 0;
-    top: 45%;
+    left: 57%;
+    top: 80%;
+    word-wrap: break-word;
+    padding: 1vh 1vw;
+    float: warp 1px;
+    color: rgb(201, 201, 201);
+    font-size: 1vw;
+    font-family: RobotoR;
+}
+
+.carousel-button {
+    color: white;
+    width: 2vw;
+    height: 15vh;
+    line-height: 15vh;
+    margin: 0;
+    position: absolute;
+    top: 40%;
     font-size: 3vw;
     background-color: transparent;
     border-width: 0;
+    border-radius: 0px;
     color: white;
+    background-color: #eb8d45;
+    text-align: center;
     transition: 0.3s;
 }
 
-.carousel-button-r {
-    color: white;
-    margin: 0 1vw;
-    position: absolute;
-    right: 0;
-    top: 45%;
-    font-size: 3vw;
-    background-color: transparent;
-    border-width: 0;
+.carousel-button:hover {
+    background-color: rgb(20, 20, 20);
     color: white;
     transition: 0.3s;
 }
@@ -368,7 +395,7 @@ body {
 
 .scroll-down-container:hover {
     background-color: rgb(20, 20, 20);
-    color: white;
+    color: #eb8d45;
     transition: 0.3s;
 }
 

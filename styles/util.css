@@ -3,6 +3,12 @@
 	color:#eb8d45;
 	transition: 0.3s;
 }
+.align-left{
+	left:0;
+}
+.align-right{
+	right: 0;
+}
 /*[ FONT SIZE ]
 ///////////////////////////////////////////////////////////
 */
