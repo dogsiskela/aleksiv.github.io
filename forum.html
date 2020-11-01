@@ -3,6 +3,34 @@
     function onClick(s) {
         window.location.href = s + ".html";
     }
+
+    function coverCarousel() {
+        var index = 0;
+
+    }
+
+    function smoothScroll(target) {
+        var scrollContainer = target;
+        do {
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do {
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        scroll = function (c, a, b, i) {
+            i += 0.7; if (i > 30) return;
+            c.scrollTop = a + (b - a) / 30 * i;
+            setTimeout(function () { scroll(c, a, b, i); }, 2);
+        }
+        // start scrolling
+        scroll(scrollContainer, scrollContainer.scrollTop, targetY + 16, 0);
+    }
 </script>
 <html lang="mk">
 
@@ -19,6 +47,7 @@
     <!---------------------------------------------------------------------------------->
     <link rel="stylesheet" type="text/css" href="./styles/util.css" />
     <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -37,15 +66,25 @@
             <span class="forum-head-navigation-items">ЗА НАС</span>
             <span class="forum-head-navigation-items">КОНТАКТ</span>
         </span>
-        <div style="width: 100%;">
-            <div class="header-image">
+
+        <div class="header-image-container">
+            <div class="carousel-button-l hover-orange"><i class="fa fa-caret-left"></i></div>
+            <div id="header_image" class="header-image"></div>
+            <div class="header-image-title">EX-YU фанк бендови од раните 80-ти </div>
+            <div class="header-image-description">Kim - Jugoslavija Југославија, Kim - Vozi me, Kim - Severna melodija
             </div>
         </div>
-        <div>
-            <iframe src="https://open.spotify.com/embed/album/6ggO3YVhyonYuFWUPBRyIv" width="300" height="380"
-                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-        </div>
 
+        <div class="carousel-button-r hover-orange transition-03"><i class="fa fa-caret-right"></i></div>
+
+        <div onclick="smoothScroll(document.getElementById('main'))" class="scroll-down-container">
+            <i class="fa fa-caret-down scroll-down-i"></i>
+
+        </div>
+    </div>
+    <div id="main" class="main-container">
+        <iframe src="https://open.spotify.com/embed/album/6ggO3YVhyonYuFWUPBRyIv" width="300" height="380"
+            frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
 </body>
 

@@ -10,29 +10,31 @@
     src: url("/assets/fonts/RussoOne-Regular.ttf");
 }
 
+@font-face {
+    font-family: RobotoL;
+    src: url("/assets/fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: RobotoR;
+    src: url("/assets/fonts/Roboto-Regular.ttf");
+}
+
 *::-webkit-scrollbar {
     width: 4px;
 }
-
-/* Track */
 
 *::-webkit-scrollbar-track {
     background: #37392E;
 }
 
-/* Handle */
-
 *::-webkit-scrollbar-thumb {
     background: #eb8d45;
 }
 
-/* Handle on hover */
-
 *::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
-
-/* MAIN PAGE STYLES */
 
 body {
     margin-top: 0;
@@ -51,7 +53,7 @@ body {
     background-position: center;
     box-shadow: inset 0 0 0 100vmax #2b4162ab;
     color: #ee8434da;
-    cursor:pointer;
+    cursor: pointer;
     border: 5px solid #ee8434;
     transition: 0.3s;
 }
@@ -65,7 +67,7 @@ body {
     margin-left: -20vw;
     color: #2b4162;
     pointer-events: none;
-    cursor:pointer;
+    cursor: pointer;
     backface-visibility: hidden;
 }
 
@@ -187,7 +189,6 @@ body {
 
 .forum-head {
     margin: 0;
-    height: 40vh;
     width: 100vw;
     background-color: rgb(20, 20, 20);
 }
@@ -283,22 +284,106 @@ body {
     }
 }
 
+.header-image-container {
+    gap: 100px;
+    margin-top: 5vh;
+    display: grid;
+    grid-template-areas: 'image title' 'image description';
+    grid-template-columns: 49vw 50vw;
+    grid-template-rows: 40%;
+}
+
 .header-image {
+    grid-area: image;
     position: relative;
-    left: 27.5vw;
-    margin-top: 8vh;
-    background-size: 100vh;
+    left: 4vw;
+    background-size: 125vh;
     background-position-x: center;
     background-repeat: no-repeat;
     background-image: url("/assets/record-player.jpg");
-    width: 45vw;
-    height: 65vh;
+    width: 52vw;
+    height: 83vh;
     transition: 0.5s;
+    font-size: 3vw;
 }
 
 .header-image:hover {
     box-shadow: inset 0 0 0 100vmax rgba(255, 255, 255, 0.082);
     transition: 0.5s;
+}
+
+.header-image-title {
+    overflow: hidden;
+    padding: 20vh 1.5vw;
+    font-family: Ruso;
+    font-size: 3vw;
+    grid-area: title;
+    color: white;
+    cursor: pointer;
+}
+
+.header-image-description {
+    grid-area: description;
+    width: 100%;
+    padding: 1vh 1vw;
+    background-color: white;
+    font-size: 1.3vw;
+    font-family: RobotoR;
+}
+
+.carousel-button-l {
+    color: white;
+    margin: 0 1vw;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    font-size: 3vw;
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    transition: 0.3s;
+}
+
+.carousel-button-r {
+    color: white;
+    margin: 0 1vw;
+    position: absolute;
+    right: 0;
+    top: 45%;
+    font-size: 3vw;
+    background-color: transparent;
+    border-width: 0;
+    color: white;
+    transition: 0.3s;
+}
+
+.scroll-down-container {
+    width: 100%;
+    height: 4vh;
+    background-color: #eb8d45;
+    font-size: 3vw;
+    color: rgb(20, 20, 20);
+    transition: 0.3s;
+}
+
+.scroll-down-container:hover {
+    background-color: rgb(20, 20, 20);
+    color: white;
+    transition: 0.3s;
+}
+
+.scroll-down-i {
+    position: absolute;
+    padding-top: 3vh;
+    left: 50%;
+    bottom: -1vh;
+}
+
+.main-container {
+    width: 100%;
+    height: 1500px;
+    background-color: black;
+    font-size: 2vw;
 }
 
 .album-of-week {

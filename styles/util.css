@@ -1,5 +1,8 @@
 .lock{overflow: hidden;}
-
+.hover-orange:hover{
+	color:#eb8d45;
+	transition: 0.3s;
+}
 /*[ FONT SIZE ]
 ///////////////////////////////////////////////////////////
 */
