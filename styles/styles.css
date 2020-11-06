@@ -285,6 +285,8 @@ body {
     }
 }
 
+/* FORUM HEADER  */
+
 .header-image-container {
     gap: 100px;
     margin-top: 3vh;
@@ -412,6 +414,8 @@ body {
     bottom: -0.7vh;
 }
 
+/* MAIN CONTAINER  */
+
 .main-container {
     width: 100%;
     height: 1500px;
@@ -455,7 +459,6 @@ body {
     padding-left: 1vw;
     background-color: #eb8d45;
     transition: 0.3s;
-
 }
 
 .aotw-meta:hover {
@@ -463,6 +466,121 @@ body {
     color: #eb8d45;
     transition: 0.3s;
 }
+
+.content-container {
+    height: 80vh;
+    width: 60vw;
+    padding: 7vh 0 0 4vw;
+}
+
+.image-container {
+    display: grid;
+    grid-template-areas: 'main side1' 'main side2' 'main side3';
+    gap: 2vw;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 29%;
+}
+
+.image-content-container {
+    grid-area: main;
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    background-image: url("/assets/images/oohlala.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.image-content-i {
+    height: 3vw;
+    font-size: 3vw;
+    line-height: 3vw;
+    overflow: hidden;
+    position: absolute;
+    top: 38%;
+}
+
+.image-content-overlay-i {
+    height: 30%;
+    width: 4%;
+    text-align: center;
+    position: relative;
+    max-width: 0%;
+    background-color: rgba(39, 39, 39, 0.664);
+    position: absolute;
+    bottom: 40%;
+    transition: 0.6s linear;
+    overflow: hidden;
+    color: white;
+}
+.image-content-overlay-i:hover{
+    background-color: rgba(39, 39, 39, 0.884);
+    cursor:pointer;
+    transition:0.3s;
+} 
+
+#blog_image:hover .image-content-overlay-i {
+    max-width: 100%;
+    transition: 0.6s linear;
+}
+
+.image-side-container {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+    transition: 0.3s;
+}
+
+.image-side-container:hover {
+    filter: brightness(1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.image-content-overlay {
+    height: 35%;
+    width: 100%;
+    position: relative;
+    max-height: 0%;
+    background-color: rgba(39, 39, 39, 0.664);
+    position: absolute;
+    bottom: 0;
+    transition: 0.6s linear;
+    overflow: hidden;
+    color: white;
+}
+
+#blog_image:hover .image-content-overlay {
+    max-height: 100%;
+    transition: 0.6s linear;
+}
+
+.container-list {
+    display: grid;
+    align-content: flex-end;
+    justify-content: left;
+    padding-left: 1.3vw;
+    padding-top: 2vh;
+    grid-template-columns: 8vw 8vw 8vw 8vw 8vw;
+    grid-template-rows: 5vh;
+}
+
+.content-navigation-button {
+    height: 0.7vh;
+    width: 90%;
+    background-color: rgb(109, 109, 109);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.content-navigation-button:hover {
+    background-color: rgb(148, 148, 148);
+    transition: 0.3s;
+}
+
+/* FOOTER  */
 
 .end-container {
     width: 100vw;
