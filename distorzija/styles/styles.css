@@ -20,6 +20,11 @@
     src: url("/distorzija/assets/fonts/Roboto-Regular.ttf");
 }
 
+@font-face {
+    font-family: SanFrancisco;
+    src: url("/assets/fonts/SF.otf");
+}
+
 *::-webkit-scrollbar {
     width: 4px;
 }
@@ -514,11 +519,12 @@ body {
     overflow: hidden;
     color: white;
 }
-.image-content-overlay-i:hover{
+
+.image-content-overlay-i:hover {
     background-color: rgba(39, 39, 39, 0.884);
-    cursor:pointer;
-    transition:0.3s;
-} 
+    cursor: pointer;
+    transition: 0.3s;
+}
 
 #blog_image:hover .image-content-overlay-i {
     max-width: 100%;

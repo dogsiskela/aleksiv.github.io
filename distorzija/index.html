@@ -1,9 +1,5 @@
 <!DOCTYPE html>
-<script>
-    function onClick(s) {
-        window.location.href = s + ".html";
-    }
-</script>
+
 <html lang="mk">
 
 <head>
@@ -19,10 +15,12 @@
     <!---------------------------------------------------------------------------------->
     <link rel="stylesheet" type="text/css" href="./styles/util.css" />
     <!---------------------------------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---------------------------------------------------------------------------------->
 
 </head>
 
-<body class="lock">
+<body id="body" class="lock" style="display: none;">
     <div class="wrapper right" onclick="onClick('forum')">
         <div class="content-area right-allign">
             ФОРУМ
@@ -45,3 +43,11 @@
 </body>
 
 </html>
+<script>
+    function onClick(s) {
+        window.location.href = s + ".html";
+    }
+    $(document).ready(function () {
+        $('#body').show();
+    });
+</script>
