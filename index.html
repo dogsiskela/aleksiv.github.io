@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 
 <head>
-
+    <!---------------------------------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="assets/main.css" />
 </head>
 
-<body style="background-color: #333;">
-    <div style="color: white; font-size: 2vw; font-family:SanFrancisco" onclick='navigate("distorzija")'>Distorzija
+<body id="body" style="background-color: #353c5d; display: none;">
+
+    <div class="grid">
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front"
+                    style="color: white; font-size: 2vw; font-family:SanFrancisco;">
+                    Distorzija
+                </div>
+                <div class="flip-card-back" onclick='navigate("distorzija")'>Distorzija</div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">HIHIHIH</div>
+                <div class="flip-card-back">AOSIDHAWOHD</div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">HIHIHIH</div>
+                <div class="flip-card-back">AOSIDHAWOHD</div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">HIHIHIH</div>
+                <div class="flip-card-back">AOSIDHAWOHD</div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">HIHIHIH</div>
+                <div class="flip-card-back">AOSIDHAWOHD</div>
+            </div>
+        </div>
+
     </div>
 </body>
 <script>
@@ -17,10 +56,8 @@
     function navigate(dir) {
         window.location.href = "/" + dir + "/index.html";
     }
+
+    $(document).ready(function () {
+        $('#body').show();
+    });
 </script>
-<style>
-    @font-face {
-        font-family: SanFrancisco;
-        src: url("/assets/fonts/SF.otf");
-    }
-</style>
