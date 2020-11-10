@@ -349,7 +349,7 @@ body {
     float: warp 1px;
     color: white;
     font-size: 1.3vw;
-    font-family: RobotoR;
+    font-family: RobotoL;
     pointer-events: none;
 }
 
@@ -470,7 +470,7 @@ body {
 .content-container {
     height: 80vh;
     width: 60vw;
-    padding: 7vh 0 0 4vw;
+    padding: 5.4vh 0 0 4vw;
 }
 
 .image-container {
