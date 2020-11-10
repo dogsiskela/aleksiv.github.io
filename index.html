@@ -1,7 +1,26 @@
 <!DOCTYPE html>
+
 <head>
+
 </head>
 
 <body style="background-color: #333;">
-    <a>Distorzija</a>
+    <div style="color: white; font-size: 2vw; font-family:SanFrancisco" onclick='navigate("distorzija")'>Distorzija
+    </div>
 </body>
+<script>
+    $(document).ready(function () {
+        $('#distorzija').click(function () {
+            window.location.href = "/distorzija/index.html";
+        });
+    });
+    function navigate(dir) {
+        window.location.href = "/" + dir + "/index.html";
+    }
+</script>
+<style>
+    @font-face {
+        font-family: SanFrancisco;
+        src: url("/assets/fonts/SF.otf");
+    }
+</style>
