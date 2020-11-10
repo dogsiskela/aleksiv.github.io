@@ -50,6 +50,7 @@
     background-color: #C1666B;
     color: black;
     box-shadow: 0.3vw 0.7vh 0.7vw 0.4vw rgba(24, 23, 23, 0.438);
+    user-select: none;
 }
 
 /* Style the back side */
@@ -58,5 +59,7 @@
     background-color: #353c5d;
     color: white;
     transform: rotateY(-180deg);
+    user-select: none;
+    cursor: pointer;
     
 }
