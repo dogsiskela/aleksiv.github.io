@@ -48,7 +48,9 @@
 
 .flip-card-front {
     background-color: #C1666B;
-    color: black;
+    color: white;
+    font-size: 2vw;
+    font-family: SanFrancisco;
     box-shadow: 0.3vw 0.7vh 0.7vw 0.4vw rgba(24, 23, 23, 0.438);
     user-select: none;
 }

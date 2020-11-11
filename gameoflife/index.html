@@ -55,7 +55,7 @@
 
 <script>
     const rows = 60;
-    const cols = 100;
+    const cols = 128;
     function createWorld() {
         let world = document.querySelector('#world');
 
@@ -76,7 +76,6 @@
                 });
                 cell.addEventListener('mousedown', function (e) {
                     if (e.buttons == 1) {
-
                         this.setAttribute('class', 'alive');
                     }
                 });
