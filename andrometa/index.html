@@ -4,33 +4,52 @@
     <!---------------------------------------------------------------------------------->
     <link rel="stylesheet" type="text/css" href="/andrometa/style.css" />
     <!---------------------------------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body class='body-style'>
-    <div style="top:10vh; left:40vw;position: absolute;">
-        <div class='star' id="star"></div>
-        <div class='star-name'>SpeakOut</div>
-    </div>
-    <div style="top:40vh; left:20vw;position: absolute;">
-        <div class='star' id="star"></div>
-        <div class='star-name'>Distorzija</div>
-    </div>
-    <div style="top:80vh; right:40vw;position: absolute;">
-        <div class='star' id="star"></div>
-        <div class='star-name'>Future</div>
-    </div>
-    <div style="top:25vh; right:20vw;position: absolute;">
-        <div class='star' id="star"></div>
-        <div class='star-name'>Logidu</div>
-    </div>
+    <div style="position: relative;" id='main'>
+        <div style="top:10vh; left:40vw;position: absolute;">
+            <div class='star' id="star"></div>
+            <div class='star-name'>SpeakOut</div>
+        </div>
+        <div style="top:40vh; left:20vw;position: absolute;">
+            <div class='star' id="star"></div>
+            <div class='star-name'>Distorzija</div>
+        </div>
+        <div style="top:80vh; right:40vw;position: absolute;">
+            <div class='star' id="star"></div>
+            <div class='star-name'>Future</div>
+        </div>
+        <div style="top:25vh; right:20vw;position: absolute;">
+            <div class='star' id="star"></div>
+            <div class='star-name'>Logidu</div>
+        </div>
 
-    <div class='logo'>
-        <div class='logo-head'>AndroMeta</div>
-        <div class='logo-description'>Претставување нови иновации во државата позади кои стојат младите.
-            Мотивирање на младите да работат и да иницираат свои проекти.
-
-            Кревање на самодовербата и мотивирање на младите да мислат за себе.
-            Младите да се грижат, да им помагаат и да соработуваат со своите врсници.
+        <div class='logo' onclick="test()">
+            <div class='logo-head'>AndroMeta</div>
+            <div class='logo-description'>Претставување нови иновации во државата позади кои стојат младите.
+                Мотивирање на младите да работат и да иницираат свои проекти.
+                Кревање на самодовербата и мотивирање на младите да мислат за себе.
+                Младите да се грижат, да им помагаат и да соработуваат со своите врсници.
+            </div>
         </div>
     </div>
+    <div class='side-show' id='side-show'>
+        <div id='close'>Close</div>
+    </div>
+
 </body>
+
+<script>
+    $(document).ready(function () {
+        $('#star').click(function () {
+            console.log('tt');
+            $('#side-show').css({ "max-width": "40vw", "transition": "0.3s" },);
+
+        });
+        $('#close').click(function () {
+            $('#side-show').css({"max-width": "0vw", "transition": "0.3s" });
+        })
+    });
+</script>
