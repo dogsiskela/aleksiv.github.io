@@ -4,6 +4,90 @@
 
 </head>
 
-<body style="background-color: yellow;">
-
+<body style="background-color: yellow;height: 100%; width: 100%;overflow: hidden; ">
+    <div class='title' unselectable="on" onselectstart="return false;" onmousedown="return false;">
+        Game of Life (: </div>
+    <div id='world'></div>
 </body>
+<style>
+    @font-face {
+        font-family: SanFrancisco;
+        src: url("/assets/fonts/SF.otf");
+    }
+
+    canvas {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-family: SanFrancisco;
+        font-size: 1.5vw;
+        margin: 2vh 0 0 0;
+        padding: 0.5vh 0 0.5vh 10vw;
+        background-color: #333;
+        color: yellow;
+        user-select: none;
+    }
+
+    #world {
+        user-select: none;
+
+    }
+
+    td {
+        border: 0.1px solid rgba(0, 0, 0, 0.377);
+        width: 10px;
+        height: 10px;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+    }
+
+    td.dead {
+        background-color: transparent;
+    }
+
+    td.alive {
+        background-color: #333;
+    }
+</style>
+
+<script>
+    const rows = 60;
+    const cols = 100;
+    function createWorld() {
+        let world = document.querySelector('#world');
+
+        let tbl = document.createElement('table');
+        tbl.setAttribute('id', 'worldgrid');
+        tbl.setAttribute('cellspacing', '0');
+        for (let i = 0; i < rows; i++) {
+            let tr = document.createElement('tr');
+            for (let j = 0; j < cols; j++) {
+                let cell = document.createElement('td');
+                cell.setAttribute('id', i + '_' + j);
+                cell.setAttribute('class', 'dead');
+                cell.addEventListener('mouseover', function (e) {
+                    if (e.buttons == 1) {
+
+                        this.setAttribute('class', 'alive');
+                    }
+                });
+                cell.addEventListener('mousedown', function (e) {
+                    if (e.buttons == 1) {
+
+                        this.setAttribute('class', 'alive');
+                    }
+                });
+
+                tr.appendChild(cell);
+            }
+            tbl.appendChild(tr);
+        }
+        world.appendChild(tbl);
+    }
+    window.onload = () => {
+        createWorld();
+    }
+</script>
