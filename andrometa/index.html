@@ -26,7 +26,7 @@
             <div class='star-name'>Logidu</div>
         </div>
 
-        <div class='logo' onclick="test()">
+        <div class='logo'>
             <div class='logo-head'>AndroMeta</div>
             <div class='logo-description'>Претставување нови иновации во државата позади кои стојат младите.
                 Мотивирање на младите да работат и да иницираат свои проекти.
@@ -36,20 +36,24 @@
         </div>
     </div>
     <div class='side-show' id='side-show'>
-        <div id='close'>Close</div>
+        <div id='close' style="position: absolute;right:0;padding-right: 3vw;">Close</div>
     </div>
 
 </body>
 
 <script>
+    var active = false;
     $(document).ready(function () {
-        $('#star').click(function () {
-            console.log('tt');
+        $('.star').click(function () {
+            active = true;
             $('#side-show').css({ "max-width": "40vw", "transition": "0.3s" },);
-
         });
         $('#close').click(function () {
-            $('#side-show').css({"max-width": "0vw", "transition": "0.3s" });
+            $('#side-show').css({ "max-width": "0vw", "transition": "0.3s" });
         })
+
+
+
     });
+
 </script>
