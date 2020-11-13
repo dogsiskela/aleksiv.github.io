@@ -25,8 +25,8 @@
 
 .star:hover {
     transform-origin: center;
-    background-color: #faad1c;
     transform: scale(5, 5);
+    background-color: #faad1c;
     border-radius: 100%;
     transition: 0.3s;
 }
