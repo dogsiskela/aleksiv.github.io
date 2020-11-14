@@ -4,9 +4,13 @@
 
 </head>
 
-<body style="background-image: linear-gradient(to right, rgb(65, 65, 65), rgb(39, 39, 39)); overflow:hidden">
+<body
+    style="background-image: url('planets/1Artboard\ 2backf.png')  ;overflow-y:hidden; background-repeat: no-repeat; background-attachment: fixed; background-position:center;user-select: none; width: 4000px;">
     <img class='sun planet' src="planets/1p-sun.svg" height="800vh" width="800vw" ondragstart="return false" />
     <img class='mercury planet' src="planets/1p-mercury.svg" ondragstart="return false" />
+    <img class='venus planet' src="planets/1p-venus.svg" ondragstart="return false" />
+    <img class='earth planet' src="planets/1p-earth.svg" ondragstart="return false" />
+    <div class='coupler'>:</div>
     <div class='text-container'>
         <div class='title-container'>Mercury</div>
         <div class='desc-container '>Mercury is the closest planet to the sun. As such, it circles the sun faster
@@ -23,54 +27,60 @@
 </body>
 
 <style>
-    @font-face {
-        font-family: SF;
-        src: url("../assets/fonts/SF.otf");
+    *::-webkit-scrollbar {
+        height: 7px;
+        border-radius: 100px;
     }
 
+    *::-webkit-scrollbar-track {
+        background: #37392E;
+    }
 
+    *::-webkit-scrollbar-thumb {
+        background: #eb8d45;
+        border-radius: 100px;
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    @font-face {
+        font-family: SF;
+        src: url("../assets/fonts/Pangolin-Regular.ttf");
+    }
+
+    .coupler{
+        position:absolute;
+        left:300vw;
+        content: '';
+    }
     .title-container {
         position: absolute;
-        top: 25%;
-        left: 40%;
+        top: 60%;
+        left: 50vw;
         border-radius: 100px;
         width: 40vw;
         height: 10vh;
         transition: 0.3s;
         font-family: SF;
         line-height: 10vh;
-        font-size: 5vw;
-        color: white;
+        font-size: 3vw;
+        color: black;
     }
 
     .desc-container {
         position: absolute;
-        top: 36%;
-        left: 42%;
+        top: 75%;
+        left: 45vw;
         border-radius: 100px;
         width: 40vw;
         height: 50vh;
         transition: 0.3s;
         font-family: SF;
         font-size: 1vw;
-        color: white;
+        color: black;
     }
-
-    .text-container {
-        opacity: 0%;
-    }
-
-    .planet:hover+.text-container {
-        opacity: 100%;
-        transition: 0.3s;
-    }
-
-
-    .planet:hover+.desc-container {
-        opacity: 100%;
-        transition: 0.3s;
-    }
-
 
     .sun {
         position: absolute;
@@ -80,22 +90,44 @@
     }
 
     .mercury {
+        overflow:hidden;
         position: absolute;
-        left: 12%;
-        top: 45%;
-        height: 15%;
-        width: 15%;
-        animation: rotate 50s linear infinite;
+        left: 13%;
+        height: 50vh;
+        width: 50vw;
+        top: 28%;
+        left: 10vw;
+        transition: 0.3s;
+        animation: rotate 20s linear infinite;
         transition: 0.3s;
     }
 
-    .mercury:hover {
+    .venus {
+        position: absolute;
+        overflow:hidden;
+        left: 60vw;
+        top: 50vh;
         height: 50%;
         width: 50%;
-        top: 25%;
-        left: 2%;
+        top: 23%;
+        transition: 0.3s;
+        animation: rotate 20s linear infinite;
         transition: 0.3s;
     }
+
+    .earth {
+        overflow:hidden;
+        position: absolute;
+        left: 120vw;
+        top: 47%;
+        height: 40vh;
+        width: 40vw;
+        top: 25%;
+        transition: 0.3s;
+        animation: rotate 20s linear infinite;
+        transition: 0.3s;
+    }
+
 
 
     @keyframes rotate {
@@ -104,7 +136,7 @@
         }
 
         100% {
-            transform: rotate(360deg);
+            transform: rotate(-360deg);
         }
     }
 </style>
