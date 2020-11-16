@@ -8,53 +8,93 @@
     src: url("assets/fonts/SF.otf");
 }
 
+@font-face {
+    font-family: Comic;
+    src: url("assets/fonts/ComicNeue-Regular.ttf");
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url("assets/fonts/Helvetica.ttf");
+}
+
 .body-style {
     margin: 0;
-    background-color: #333;
+    padding: 0;
+    background-color: #29294c;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+    max-width: none;
+    user-select: none;
+}
+
+.speakout-star {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-image: url('assets/1speakout.svg');
+    height: 100vh;
+    width: 100vw;
+    background-size: 120vmin;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: none;
+}
+
+.background-logo {
+    position: relative;
+    top: 5vh;
+    left: 15vw;
 }
 
 .star {
     position: absolute;
-    height: 17px;
-    width: 17px;
+    height: 1vw;
+    width: 1vw;
     color: white;
-    background-color: white;
+    background-color: #faad1c;
     border-radius: 100%;
     transition: 0.3s;
 }
 
 .star:hover {
     transform-origin: center;
-    transform: scale(5, 5);
+    transform: scale(2.5, 2.5);
     background-color: #faad1c;
     border-radius: 100%;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .star-name {
     position: absolute;
     color: white;
-    top: 3vh;
+    left: 2.2vw;
+    top: 0.4vh;
     font-size: 1vw;
     font-family: SF;
     transition: 0.3s;
+    font-size: 1.5vw;
 }
 
 #star:hover+.star-name {
-    margin-top: 4vh;
+    margin-left: 2vw;
     transition: 0.3s;
 }
 
 .logo {
     position: absolute;
     color: white;
-    top: 30vh;
-    left: 35vw;
+    top: 20vh;
+    left: 40vw;
 }
 
 .logo-head {
-    font-family: Papaya;
-    font-size: 6vw;
+    font-family: Comic;
+    font-size: 1.5vw;
+    color: white;
 }
 
 .logo-description {
@@ -73,5 +113,26 @@
     max-width: 0vw;
     background-color: white;
     right: 0vw;
+    top: 0vh;
     transition: 0.3s;
+}
+.menu-left{
+    overflow: hidden;
+    margin: 0;
+    padding:0;
+    position: absolute;
+    height: 100vh;
+    width: 4vw;
+    left: 0;
+    top:0;
+    background-color:white;
+}
+
+.end-logo {
+    color: white;
+    font-family: Helvetica;
+    font-size: 1vw;
+    position: absolute;
+    left: 46.6%;
+    bottom: 3%;
 }
