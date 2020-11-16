@@ -1,16 +1,6 @@
 @font-face {
-    font-family: Papaya;
-    src: url("assets/fonts/papaya.otf");
-}
-
-@font-face {
     font-family: SF;
     src: url("assets/fonts/SF.otf");
-}
-
-@font-face {
-    font-family: Comic;
-    src: url("assets/fonts/ComicNeue-Regular.ttf");
 }
 
 @font-face {
@@ -116,16 +106,122 @@
     top: 0vh;
     transition: 0.3s;
 }
-.menu-left{
-    overflow: hidden;
+
+.project-title {
+    font-size: 3vw;
+    font-family: Helvetica;
+    margin-left: 2vw;
+    margin-top: 5vh;
+}
+
+.project-d-c {
+    width: 90%;
+    height: 50%;
+    background-color: #29294c;
+    border-radius: 3%;
+    margin-left: 5%;
+    margin-top: 20%
+}
+
+.menu-left {
     margin: 0;
-    padding:0;
+    padding: 0;
     position: absolute;
     height: 100vh;
     width: 4vw;
     left: 0;
-    top:0;
-    background-color:white;
+    top: 0;
+    background-color: white;
+}
+
+/* icons */
+
+.rocket-i {
+    position: absolute;
+    right: 0.045vw;
+    bottom: -7vh;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.rocket-i:hover {
+    bottom: -3vh;
+    transition: 0.3s;
+}
+
+.info-i {
+    position: absolute;
+    right: 1vw;
+    bottom: 40vh;
+    background-image: url("assets/icons/information.svg");
+    height: 5%;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    width: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.question-i {
+    position: absolute;
+    right: 1vw;
+    bottom: 50vh;
+    background-image: url("assets/icons/question.svg");
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    height: 5%;
+    width: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.group-i {
+    position: absolute;
+    right: 1vw;
+    bottom: 60vh;
+    background-image: url("assets/icons/group.svg");
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    height: 5%;
+    width: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.group-b {
+    position: absolute;
+    left: 1vw;
+    bottom: 59.2vh;
+    margin-top: 7.5%;
+    margin-bottom: 7.5%;
+    height: 5%;
+    width: 300%;
+    opacity: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-weight: 500;
+    margin-left: 4vw;
+    font-family: SF;
+    font-size: 1.2vw;
+    color: #faad1c
+}
+
+.group-i:hover, .info-i:hover, .question-i:hover {
+    filter: invert(83%) sepia(60%) saturate(6000%) hue-rotate(344deg) brightness(100%) contrast(96%);
+}
+
+.join-text {
+    color: white;
+    font-family: SF;
+    margin-bottom: 5vh;
+    visibility: hidden;
+}
+
+#join-img:hover+.join-text {
+    visibility: visible;
 }
 
 .end-logo {

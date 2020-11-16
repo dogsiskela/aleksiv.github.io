@@ -29,12 +29,24 @@
     </div>
 
     <div class='side-show' id='side-show'>
-        <div id='close' style="position: absolute;right:0;padding-right: 3vw;">Close</div>
+        <div id='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img src="assets/icons/exit.svg"
+                height="15vw" width="15vw"></div>
+        <div class="project-title">SpeakOut</div>
+        <div class="project-d-c"> </div>
     </div>
     <div class='menu-left'>
-        <img src="assets/information.svg" height="20%" width="60%" style="position: absolute; right:1vw; bottom:30vh;">
+        <div class="info-i"></div>
+        <div class="group-b team">Тим</div>
+        <div class="group-i"></div>
+        <div class="group-b question" style="bottom: 49.2vh;">Што е Андромета?</div>
+        <div class="question-i"></div>
+        <div class="group-b info" style="bottom: 39.2vh;">Информации</div>
+        <img src="assets/icons/rocket.svg" height="30%" width="100%" class="rocket-i">
+        <div class="group-b join"
+            style="bottom: 6vh; background-color: #faad1c; color:#29294c; height: 3.5vh; width: 9vw; text-justify: center; text-align: center; border-radius: 100px;">
+            Приклучи се! </div>
     </div>
-    <img src="assets/shuttle.svg" height="5%" width="5%" style="position: absolute; right:3vw; bottom:4vh;">
+
     <div class='end-logo'>andrometa.mk</div>
 
 </body>
@@ -49,23 +61,29 @@
         $('#close').click(function () {
             $('#side-show').css({ "max-width": "0vw", "transition": "0.3s" });
         })
+        $('.group-i').hover(function () {
+            $('.team').css({ 'opacity': '100%', 'transition': '0.3s' })
+        }, function () {
+            $('.team').css({ 'opacity': '0%', 'transition': '0.3s' })
+        });
+        $('.info-i').hover(function () {
+            $('.info').css({ 'opacity': '100%', 'transition': '0.3s' })
+        }, function () {
+            $('.info').css({ 'opacity': '0%', 'transition': '0.3s' })
+        });
+        $('.question-i').hover(function () {
+            $('.question').css({ 'opacity': '100%', 'transition': '0.3s' })
+        }, function () {
+            $('.question').css({ 'opacity': '0%', 'transition': '0.3s' })
+        });
 
-
+        $('.rocket-i').hover(function () {
+            $('.join').css({ 'opacity': '100%', 'transition': '0.3s' })
+        }, function () {
+            $('.join').css({ 'opacity': '0%', 'transition': '0.3s' })
+        });
 
     });
 
-    function showArrow(event, img) {
-        var posX = event.offsetX ? (event.offsetX) : event.pageX - img.offsetLeft;
-        var posY = event.offsetY ? (event.offsetY) : event.pageY - img.offsetTop;
-        var w = window.style.width;
-        var h = window.style.width;
-        var xasp = posX / w;
-        var yasp = posY / h;
-        alert("You clicked at: (" + w + "," + h + ")");
-        // if (yasp > 0.186 && yasp < 0.24 && xasp > 0.887 && xasp < 0.927) {
-        //     alert("SpeakOut!");
-        // }
-
-    }
 
 </script>
