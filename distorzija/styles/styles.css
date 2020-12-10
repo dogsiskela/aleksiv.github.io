@@ -641,10 +641,45 @@ body {
 /* BLOG */
 
 .main-container-blog {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
     background-color: rgb(26, 25, 25);
     margin: 0;
     padding: 0;
+}
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    grid-auto-rows: 40vh;
+    padding: 8vh 1vw 8vh 7vw;
+    gap: 10vh 5vw;
+}
+
+.blog-card {
+    height: 40vh;
+    width: 40vw;
+    background-color: gray;
+    position: relative;
+}
+
+.blog-card-image {
+    height: inherit;
+    width: inherit;
+    background-image: url("../assets/record-player.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.blog-card-container {
+    position: absolute;
+    height:30%;
+    width:100%;
+    bottom:0;
+    background-color: rgba(39, 39, 39, 0.705);
+    color:white;
+    font-family: RobotoL;
+    font-size: 1.5vw;
 }
 
 /* FOOTER  */
