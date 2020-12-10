@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<script>
+    function onClick(s) {
+        window.location.href = s + ".html";
+    }
+</script>
+<html lang="mk">
+
+<head>
+    <title>
+        Distorzija - Novosti
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---------------------------------------------------------------------------------->
+    <link rel="icon" type="image/png" href="../assets/Final.ico" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="../styles/util.css" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="../styles/novosti.css">
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!---------------------------------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---------------------------------------------------------------------------------->
+</head>
+
+<body class="forum-background">
+    <div class="forum-head">
+        <span class="forum-head-navigation">
+            <span id="logo" class="logo-icon" onclick="onClick('index')"></span>
+            <span class="logo-text">
+                distorzija
+            </span>
+            <span class="forum-head-navigation-items" onclick="onClick('forum')">ДОМА</span>
+            <span class="selected" onclick="onClick('file')">НОВОСТИ</span>
+            <span class="forum-head-navigation-items" onclick="onClick('blogs')">БЛОГОВИ</span>
+            <span class="forum-head-navigation-items" onclick="onClick('about')">ЗА НАС</span>
+            <span class="forum-head-navigation-items" onclick="onClick('contact')">КОНТАКТ</span>
+        </span>
+    </div>
+    <div class="novosti">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9vMLTcftlyI" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <iframe src="https://open.spotify.com/embed/album/5G58VVE9ub1KE01Mvbd8XM" width="300" height="200"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <div class="tekst">
+            Ne raboti youtube embed link bez http server :( Ali zatoa spotify si pi4i xD
+        </div>
+    </div>
+</body>
+
+</html>
