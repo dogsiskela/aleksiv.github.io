@@ -45,6 +45,24 @@ body {
     margin-top: 0;
 }
 
+h1 {
+    color: white;
+    font-family: RobotoL;
+    font-size: 2.5vw;
+    padding-left: 2vw;
+    padding-top: 1.5vh;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.76);
+    padding: 5vh 3vw 3vh 5vw;
+    margin: 0;
+    font-family: RobotoL;
+    text-align: end;
+    font-size: 1.5vw;
+    text-align: start;
+}
+
 .wrapper {
     width: 100vw;
     height: 100vh;
@@ -215,6 +233,7 @@ body {
     right: -30vw;
     color: white;
     font-size: 1.2vw;
+    height: 4vh;
     font-family: Ruso;
     user-select: none;
     transition: 0.2s;
@@ -645,7 +664,7 @@ body {
     min-height: 100vh;
     background-color: rgb(26, 25, 25);
     margin: 0;
-    padding: 0;
+    padding: 0 0 8vh 0;
 }
 
 .blogs-grid {
@@ -659,8 +678,17 @@ body {
 .blog-card {
     height: 40vh;
     width: 40vw;
+    transform: scale(1);
     background-color: gray;
     position: relative;
+    cursor: pointer;
+    outline: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
 }
 
 .blog-card-image {
@@ -673,14 +701,105 @@ body {
 
 .blog-card-container {
     position: absolute;
-    height:30%;
-    width:100%;
-    bottom:0;
+    height: 30%;
+    width: 100%;
+    bottom: 0;
     background-color: rgba(39, 39, 39, 0.705);
-    color:white;
+    color: white;
     font-family: RobotoL;
     font-size: 1.5vw;
 }
+
+.blog-navigation {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+}
+
+.blog-navigation-i {
+    color: white;
+    position: relative;
+    font-size: 2.5vw;
+    width: 6vw;
+    text-align: center;
+    cursor: default;
+    transition: 0.3s;
+}
+
+.i-b:hover, blog-navigation-i {
+    color: #eb8d45;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.blog-head {
+    height: 60vh;
+    width: 100%;
+    background-image: url("../assets/record-player.jpg");
+    background-position: center;
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+.blog-head-text {
+    height: 20vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0vh;
+    text-align: left;
+    background-color: rgba(39, 39, 39, 0.61);
+}
+
+/* CONTACT */
+
+.main-container-contact {
+    position: relative;
+    height: 83.4vh;
+    overflow: hidden;
+    background-color: rgb(26, 25, 25);
+    margin: 0;
+    padding: 0 0 8vh 0;
+}
+
+.side-container {
+    width: 35vw;
+    height: 100%;
+    right: 0;
+    position: absolute;
+}
+
+.side-container-y {
+    position: relative;
+    height: 100%;
+    width: 100vw;
+    background-color: #eb8d45;
+    transform: skewX(8deg);
+}
+
+.icons-c {
+    position: relative;
+    top: 81vh;
+    left: 28vw;
+    margin: 0 1vw 3vh 1vw;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.icons-c:hover {
+    fill: white;
+    transition: 0.3s;
+}
+
+.logo-c {
+    position: relative;
+    top: 85.5vh;
+    left: 16vw;
+    font-family: Gagalin;
+    pointer-events: none;
+    color:black;
+    font-size: 3vh;
+}
+
 
 /* FOOTER  */
 
