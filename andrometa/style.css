@@ -8,6 +8,11 @@
     src: url("assets/fonts/Helvetica.ttf");
 }
 
+@font-face {
+    font-family: Ruso;
+    src: url("assets/fonts/RussoOne-Regular.ttf");
+}
+
 .body-style {
     margin: 0;
     padding: 0;
@@ -226,6 +231,86 @@
     background-color: white;
 }
 
+/* Contact */
+
+.contact-form {
+    position: absolute;
+    left: 1vw;
+    padding: 3vh;
+}
+
+.contact-f-l {
+    font-family: SF;
+    font-size: 1.5vw;
+    margin-right: 2vw;
+}
+
+.input-email {
+    width: 25vw;
+    margin: 0;
+    padding: 1vh 0 1vh 1vw;
+    border: none;
+    background-color: transparent;
+    color: black;
+    background-color: #29294c;
+    font-family: SF;
+    color: white;
+    font-size: 1vw;
+    border-radius: 10px;
+    border-bottom: 3px solid #eb8d45;
+}
+
+.input-email:focus {
+    outline: none;
+}
+
+.input-content {
+    height: 40vh;
+    min-width: 34vw;
+    min-height: 40vh;
+    max-width: 34vw;
+    max-height: 44vh;
+    margin-top: 1vh;
+    padding: 2vh 0 1vh 1vw;
+    background-color: #29294c;
+    border: none;
+    color: white;
+    font-family: Helvetica;
+    font-size: 1vw;
+    border-radius: 10px;
+    border-bottom: 3px solid #eb8d45;
+}
+
+.input-content:focus {
+    outline: none;
+}
+
+.form-send {
+    margin-left: 20vw;
+    height: 3vw;
+    width: 15vw;
+    font-family: Ruso;
+    font-size: 1.3vw;
+    background-color: #eb8d45;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 100px;
+    color: #29294c;
+    transition: 0.3s;
+    box-shadow: 0px 8px 10px #3333336c;
+}
+
+.form-send:hover {
+    outline: none;
+    border: none;
+    background-color: #29294c;
+    color: #eb8d45;
+    transform: translateY(1vh);
+    box-shadow: 0px 4px 10px #3333336c;
+    transition: 0.3s;
+}
+
 /* icons */
 
 .rocket-i {
@@ -317,7 +402,7 @@
 }
 
 .end-logo {
-    color: #faad1c;
+    color: #eb8d45;
     font-family: Helvetica;
     font-size: 1vw;
     position: absolute;

@@ -24,7 +24,7 @@
             <div class='star-name'>SpeakOut</div>
         </div>
         <div style="top:13.24%; left:55.806%;position: absolute;">
-            <div class='star' id="distorzija" style="    height: 1.3vw; width: 1.3vw;"></div>
+            <div class='star' id="distorzija" style="height: 1.3vw; width: 1.3vw;"></div>
             <div class='star-name'>Distorzija</div>
         </div>
         <div style="top:37.1%; left:14.68%;position: absolute;">
@@ -58,19 +58,6 @@
             </div>
         </div>
     </div>
-    <div class='side-show' id='side-show-contact'>
-        <div class='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img
-                src="assets/icons/exit.svg" height="15vw" width="15vw"></div>
-        <div class='project-txt-title'>
-            <div style="display: grid; grid-template-areas: 'image text'; grid-template-columns: 100% 0;">
-                <div class="project-logo"></div>
-                <div class="project-title" id='project-title'>Project title</div>
-            </div>
-            <div class="project-summary" id='project-summary'></div>
-        </div>
-
-        <div class="project-d-c" id='project-inside'> </div>
-    </div>
     <div class='side-show' id='side-show-question'>
         <div class='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img
                 src="assets/icons/exit.svg" height="15vw" width="15vw"></div>
@@ -102,6 +89,37 @@
         </div>
     </div>
 
+    <div class='side-show' id='side-show-contact'>
+        <div class='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img
+                src="assets/icons/exit.svg" height="15vw" width="15vw"></div>
+        <div class='project-txt-title' style="margin:0;padding:3vh 0 5vh 3vw; background-color: #eb8d45;border-bottom: 15px solid #29294c;">
+            <div style="display: grid; grid-template-areas: 'image text'; grid-template-columns: 100% 0;">
+                <div style="color:#29294c; font-size:3.2vw; font-family:Ruso;margin-top:3vh" id='project-title'>Контакт</div>
+            </div>
+            <div style="color:#29294c; font-size:2.2vw; font-family:Helvetica" id='project-title'>Пиши ни!</div>
+        </div>
+
+        <div class="project-d-c" id='project-inside' style="margin-top:2vh;">
+            <div class="contact-form">
+                <div>
+                    <input type="text" class="input-email" value="E-Mail"
+                        onfocus="if(this.value=='E-Mail')this.value=''" onblur="if(this.value=='')this.value='E-Mail'">
+                </div>
+                <div>
+                    <textarea class="input-content" onfocus="if(this.value=='Вашата порака..')this.value=''"
+                        onblur="if(this.value=='')this.value='Вашата порака..'">Вашата порака..</textarea>
+                </div>
+                <input type="button" class="form-send" value="ПРАТИ">
+            </div>
+        </div>
+        <div class="project-links" style="background-color:#29294c">
+            <div class='project-links-t' id='l-2' style="color:#eb8d45; font-size:1.2vw; font-family:Helvetica; margin-left:13vw" >
+                contact@andrometa.mk
+            </div>
+
+        </div>
+    </div>
+
 
 
     <div class='menu-left'>
@@ -112,7 +130,7 @@
         <div class="question-i m-b" id='andrometa'></div>
         <div class="group-b question" style="bottom: 49vh;">Што е Андромета?</div>
         <div class="info-i m-c" id='andrometa'></div>
-        <div class="group-b info" style="bottom: 39vh;">Информации</div>
+        <div class="group-b info" style="bottom: 39vh;">Информации и контакт</div>
         <img src="assets/icons/rocket.svg" height="30%" width="100%" class="rocket-i">
 
         <div class="group-b join"
@@ -163,6 +181,7 @@
     $(document).ready(function () {
         $('.star').click(function () {
             ev = event.target.id;
+            thisc = this;
             $('#side-show-contact').css({ "max-width": "0vw", "transition": "0.3s" });
             $('#side-show-question').css({ "max-width": "0vw", "transition": "0.3s" });
             if (active == true) {
@@ -181,10 +200,10 @@
         $('.m-b').click(function () {
             ev = event.target.id;
             $('#side-show').css({ "max-width": "0vw", "transition": "0.3s" });
-            $('#side-show-question').css({ "max-width": "0vw", "transition": "0.3s" });
+            $('#side-show-contact').css({ "max-width": "0vw", "transition": "0.3s" });
             if (active == true) {
                 setTimeout(function () {
-                    $('.project-logo').css({ "background-image": "url('assets/project-logo/" + ev+ ".svg')" });
+                    $('.project-logo').css({ "background-image": "url('assets/project-logo/" + ev + ".svg')" });
                     $('#side-show-question').css({ "max-width": "40vw", "transition": "0.3s" },);
 
                 }, 300);
@@ -197,7 +216,23 @@
             active = true;
         });
         $('.m-c').click(function () {
-            $('#side-show-contact').css({ "max-width": "40vw", "transition": "0.3s" },);
+
+            ev = event.target.id;
+            $('#side-show').css({ "max-width": "0vw", "transition": "0.3s" });
+            $('#side-show-question').css({ "max-width": "0vw", "transition": "0.3s" });
+            if (active == true) {
+                setTimeout(function () {
+                    $('.project-logo').css({ "background-image": "url('assets/project-logo/" + ev + ".svg')" });
+                    $('#side-show-contact').css({ "max-width": "40vw", "transition": "0.3s" },);
+
+                }, 300);
+            }
+            else {
+                $('.project-logo').css({ "background-image": "url('assets/project-logo/" + event.target.id + ".svg')" });
+                $('#side-show-contact').css({ "max-width": "40vw", "transition": "0.3s" },);
+
+            }
+            active = true;
         })
         $('.close').click(function () {
             active = false;
