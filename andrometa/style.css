@@ -13,6 +13,14 @@
     src: url("assets/fonts/RussoOne-Regular.ttf");
 }
 
+button:focus {
+    border: none;
+    outline: none;
+}
+select:focus{
+    outline:none;
+}
+
 .body-style {
     margin: 0;
     padding: 0;
@@ -49,7 +57,7 @@
     height: 1vw;
     width: 1vw;
     color: white;
-    background-color: #faad1c;
+    background-color: #eb8d45;
     border-radius: 100%;
     transition: 0.3s;
 }
@@ -57,7 +65,7 @@
 .star:hover {
     transform-origin: center;
     transform: scale(2.5, 2.5);
-    background-color: #faad1c;
+    background-color: #eb8d45;
     border-radius: 100%;
     transition: 0.3s;
     cursor: pointer;
@@ -91,7 +99,7 @@
 
 .andrometa-l-t::after {
     position: absolute;
-    color: #faad1c;
+    color: #eb8d45;
     top: 5vh;
     left: 6.5vw;
     font-family: Helvetica;
@@ -113,19 +121,20 @@
 
 /* Project slide */
 
-.project-txt-title {
-    margin-left: 2vw;
+.close {
+    cursor: pointer;
 }
 
 .project-logo {
     grid-area: 'image';
-    margin-top: 3vh;
-    left: 0.8vw;
-    width: 100%;
-    height: 6vw;
+    background-color: white;
+    padding-top: 3vh;
+    width: 40vw;
+    height: 10vw;
     background-size: 30vw;
     background-repeat: no-repeat;
-    background-position: left;
+    background-position: center;
+    border-bottom: 2.5vh solid #29294c;
 }
 
 .project-title {
@@ -138,7 +147,7 @@
 .project-summary {
     font-size: 1vw;
     font-family: Helvetica;
-    margin-top: 5vh;
+    margin: 5vh 0 0 2vw;
     width: 35vw;
 }
 
@@ -167,7 +176,7 @@
 
 .p-d-b-t:hover {
     color: #29294c;
-    background-color: #faad1c;
+    background-color: #eb8d45;
     transition: 0.3s;
 }
 
@@ -178,11 +187,11 @@
     bottom: 0;
     width: 100%;
     height: 5%;
-    background-color: rgb(37, 37, 37);
+    background-color: #29294c;
 }
 
 .project-links-t {
-    color: #faad1c;
+    color: #eb8d45;
     line-height: 5vh;
     font-family: SF;
     padding: 0 0 0 1vw;
@@ -195,26 +204,26 @@
     display: block;
     position: absolute;
     bottom: 3vh;
-    background-color: #faad1c;
-    border-radius: 3px;
+    background-color: #eb8d45;
+    border-radius: 100px;
     border: none;
     text-align: center;
-    color: rgb(37, 37, 37);
+    color: #29294c;
     margin-left: 1vw;
-    box-shadow: 5px 10px rgb(37, 37, 37);
+    box-shadow: 5px 10px #29294c;
     padding: 10px 0 10px 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: SF;
-    font-size: 1.5vw;
+    font-family: Ruso;
+    font-size: 1.3vw;
     transition: 0.3s;
     cursor: pointer;
 }
 
 .project-links-b:hover {
-    box-shadow: -0.5vw 0.4vw #faad1c;
-    background-color: rgb(37, 37, 37);
+    box-shadow: -0.5vw 0.4vw #eb8d45;
+    background-color: #29294c;
     border-width: 0.3vw;
     color: white;
     transition: 0.3s;
@@ -232,6 +241,36 @@
 }
 
 /* Contact */
+
+input[type='radio']:after {
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 100px;
+    top: -0.1vw;
+    left: -0.2vw;
+    position: relative;
+    background-color: #29294c;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    transition:0.3s;
+}
+
+input[type='radio']:checked:after {
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 100px;
+    top: -0.1vw;
+    left: -0.2vw;
+    position: relative;
+    background-color: #eb8d45;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+    transition:0.3s;
+}
 
 .contact-form {
     position: absolute;
@@ -383,7 +422,7 @@
     margin-left: 4vw;
     font-family: SF;
     font-size: 1.2vw;
-    color: #faad1c
+    color: #eb8d45
 }
 
 .group-i:hover, .info-i:hover, .question-i:hover {
