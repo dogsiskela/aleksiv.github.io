@@ -33,9 +33,10 @@
         </div>
     </div>
 
+
     <div class='side-show' id='side-show'>
-        <div id='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img src="assets/icons/exit.svg"
-                height="15vw" width="15vw"></div>
+        <div class='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img
+                src="assets/icons/exit.svg" height="15vw" width="15vw"></div>
         <div class='project-txt-title'>
             <div style="display: grid; grid-template-areas: 'image text'; grid-template-columns: 100% 0;">
                 <div class="project-logo"></div>
@@ -53,21 +54,65 @@
                 www.speakapp.mk
             </div>
             <div>
-                <button type="button" class='project-links-b' onclick='gotoSite()' id='project-button'> Линк..</button>
+                <button type="button" class='project-links-b' onclick='gotoSite()' id='project-button'> Линк</button>
             </div>
         </div>
     </div>
+    <div class='side-show' id='side-show-contact'>
+        <div class='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img
+                src="assets/icons/exit.svg" height="15vw" width="15vw"></div>
+        <div class='project-txt-title'>
+            <div style="display: grid; grid-template-areas: 'image text'; grid-template-columns: 100% 0;">
+                <div class="project-logo"></div>
+                <div class="project-title" id='project-title'>Project title</div>
+            </div>
+            <div class="project-summary" id='project-summary'></div>
+        </div>
+
+        <div class="project-d-c" id='project-inside'> </div>
+    </div>
+    <div class='side-show' id='side-show-question'>
+        <div class='close' style="position: absolute;right:0;padding-right: 2vw; top:2vh"><img
+                src="assets/icons/exit.svg" height="15vw" width="15vw"></div>
+        <div class='project-txt-title'>
+            <div style="display: grid; grid-template-areas: 'image text'; grid-template-columns: 100% 0;">
+                <div class="project-logo"></div>
+                <div class="project-title" id='project-title'>Project title</div>
+            </div>
+            <div class="project-summary" id='project-summary'>Низа на проекти водени од младите кои ги имаат следните
+                цели</div>
+        </div>
+
+        <div class="project-d-c" id='project-inside'>
+            <div></div>
+            <div class="p-d-b-t">Претставување нови иновации во државата позади кои стојат младите.</div>
+            <div class="p-d-b-t">Мотивирање на младите да работат и да иницираат свои проекти.</div>
+            <div class="p-d-b-t">Помагање на младите да почнат со реализацијата на своите идеи.</div>
+            <div class="p-d-b-t">Подобрување на менталното здравје кај младите.</div>
+            <div class="p-d-b-t">Активирање и зближување на младите.</div>
+        </div>
+        <div class="project-links">
+            <div class='project-links-t' id='l-1'>
+                @andrometango
+            </div>
+            <div class='project-links-t' id='l-2'>
+                www.speakapp.mk
+            </div>
+
+        </div>
+    </div>
+
+
 
     <div class='menu-left'>
 
         <div class="andrometa-l-t"></div>
-        <div class="info-i"></div>
-        <div class="group-b team">Тим</div>
         <div class="group-i"></div>
-        <div class="group-b question" style="bottom: 49vh;">Што е Андромета?</div>
+        <div class="group-b team">Тим</div>
         <div class="question-i m-b" id='andrometa'></div>
+        <div class="group-b question" style="bottom: 49vh;">Што е Андромета?</div>
+        <div class="info-i m-c" id='andrometa'></div>
         <div class="group-b info" style="bottom: 39vh;">Информации</div>
-
         <img src="assets/icons/rocket.svg" height="30%" width="100%" class="rocket-i">
 
         <div class="group-b join"
@@ -87,7 +132,7 @@
         redirectWindow.location;
     }
     function showContent(project) {
-        document.getElementById('project-button').innerHTML = 'Линк..';
+        document.getElementById('project-button').innerHTML = 'Разгледај';
         switch (project) {
             case 'distorzija':
                 document.getElementById('project-title').innerHTML = 'Distorzija';
@@ -108,35 +153,57 @@
                 document.getElementById('l-2').innerHTML = 'www.speakapp.mk';
                 break;
             case 'andrometa':
-                document.getElementById('project-summary').innerHTML = '';
-                document.getElementById('project-summary').innerHTML += 'Низа на проекти водени од младите кои ги имаат следните цели';
-                document.getElementById('project-inside').innerHTML = '';
-                document.getElementById('project-inside').innerHTML += '<div class="p-d-b-t">Претставување нови иновации во државата позади кои стојат младите.<\div>'
-                document.getElementById('project-inside').innerHTML += '<div class="p-d-b-t">Мотивирање на младите да работат и да иницираат свои проекти.<\div>';
-                document.getElementById('project-inside').innerHTML += '<div class="p-d-b-t">Помагање на младите да почнат со реализацијата на своите идеи.<\div>';
-                document.getElementById('project-inside').innerHTML += '<div class="p-d-b-t">Подобрување на менталното здравје кај младите.<\div>';
-                document.getElementById('project-inside').innerHTML += '<div class="p-d-b-t">Активирање и зближување на младите.<\div>';
-                document.getElementById('l-1').innerHTML = '';
-                document.getElementById('l-2').innerHTML = '';
-                break;
+
 
         }
-
         $('#side-show').css({ "max-width": "40vw", "transition": "0.3s" },);
     }
+
+
     $(document).ready(function () {
         $('.star').click(function () {
+            ev = event.target.id;
+            $('#side-show-contact').css({ "max-width": "0vw", "transition": "0.3s" });
+            $('#side-show-question').css({ "max-width": "0vw", "transition": "0.3s" });
+            if (active == true) {
+                setTimeout(function () {
+                    $('.project-logo').css({ "background-image": "url('assets/project-logo/" + ev + ".svg')" });
+                    showContent(ev);
+                }, 300);
+            }
+            else {
+                $('.project-logo').css({ "background-image": "url('assets/project-logo/" + ev + ".svg')" });
+                showContent(ev);
+            }
             active = true;
-            $('.project-logo').css({ "background-image": "url('assets/project-logo/" + event.target.id + ".svg')" });
-            showContent(event.target.id);
+
         });
         $('.m-b').click(function () {
-            active = true;
-            $('.project-logo').css({ "background-image": "url('assets/project-logo/" + event.target.id + ".svg')" });
-            showContent(event.target.id);
-        });
-        $('#close').click(function () {
+            ev = event.target.id;
             $('#side-show').css({ "max-width": "0vw", "transition": "0.3s" });
+            $('#side-show-question').css({ "max-width": "0vw", "transition": "0.3s" });
+            if (active == true) {
+                setTimeout(function () {
+                    $('.project-logo').css({ "background-image": "url('assets/project-logo/" + ev+ ".svg')" });
+                    $('#side-show-question').css({ "max-width": "40vw", "transition": "0.3s" },);
+
+                }, 300);
+            }
+            else {
+                $('.project-logo').css({ "background-image": "url('assets/project-logo/" + event.target.id + ".svg')" });
+                $('#side-show-question').css({ "max-width": "40vw", "transition": "0.3s" },);
+
+            }
+            active = true;
+        });
+        $('.m-c').click(function () {
+            $('#side-show-contact').css({ "max-width": "40vw", "transition": "0.3s" },);
+        })
+        $('.close').click(function () {
+            active = false;
+            $('#side-show').css({ "max-width": "0vw", "transition": "0.3s" });
+            $('#side-show-contact').css({ "max-width": "0vw", "transition": "0.3s" });
+            $('#side-show-question').css({ "max-width": "0vw", "transition": "0.3s" });
         })
         $('.group-i').hover(function () {
             $('.team').css({ 'opacity': '100%', 'transition': '0.3s' })
@@ -160,8 +227,15 @@
             $('.join').css({ 'opacity': '0%', 'transition': '0.3s' })
         });
 
-
+        $(document).keydown(function (e) {
+            var keycode1 = (e.keyCode ? e.keyCode : e.which);
+            if (keycode1 == 0 || keycode1 == 9) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+        });
     });
+
 
 
 </script>
