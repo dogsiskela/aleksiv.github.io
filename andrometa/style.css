@@ -25,6 +25,7 @@ select:focus{
     margin: 0;
     padding: 0;
     background-color: #29294c;
+    background: linear-gradient(180deg, #29294c 20% , #21213d 100%);
     position: relative;
     overflow: hidden;
     min-height: 100vh;
