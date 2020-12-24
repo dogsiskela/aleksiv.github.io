@@ -50,3 +50,8 @@ function menuMutate() {
     }
 }
 
+function showLoaded() {
+    document.getElementsByClassName("loading")[0].style.visibility = "hidden";
+}
+
+
