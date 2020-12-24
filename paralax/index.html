@@ -12,7 +12,10 @@
 <body onload="showLoaded()">
 
     <header onmousedown="return false" class="header">
-        <div class="loading"></div>
+        <div class="loading">
+            <div class="loading-item"></div>
+            <div style="color:white; position: absolute; right: 7vw; bottom: 4vh; font-size:2vw; font-family: Ruso;">Loading..</div>
+        </div>
         <img src="./assets/images/mountain.png" class="mountain-img translate" data-speed="0.4">
         <img src="./assets/images/left.png" class="left-img translate" data-speed="-0.1">
         <img src="./assets/images/right.png" class="right-img translate" data-speed="-0.1">
@@ -21,7 +24,8 @@
         <img src="./assets/images/sky.png" class="sky-img translate" data-speed="0.4">
         <div class="shadow"></div>
         <div class="menu-overlay">
-            <div style="font-size: 7vw; font-family: Ruso; padding-left: 3vw; color: black; margin-bottom: 8vh; width: 100vw; margin-top: 3vh;">
+            <div
+                style="font-size: 7vw; font-family: Ruso; padding-left: 3vw; color: black; margin-bottom: 8vh; width: 100vw; margin-top: 3vh;">
                 Menu
             </div>
             <div class="menu-el">
