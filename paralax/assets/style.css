@@ -1,8 +1,28 @@
-::-webkit-scrollbar{
+@font-face {
+    font-family: SF;
+    src: url("./fonts/SF.otf");
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url("./fonts/Helvetica.ttf");
+}
+
+@font-face {
+    font-family: Ruso;
+    src: url("./fonts/RussoOne-Regular.ttf");
+}
+
+:root {
+    --color-blue: rgba(31, 84, 184, 0.911);
+}
+
+::-webkit-scrollbar {
     width: 4px;
 }
-::-webkit-scrollbar-thumb{
-    background-color: rgba(31, 84, 184, 0.911);
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-blue);
 }
 
 body {
@@ -19,25 +39,48 @@ header {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-
+    user-select: none;
 }
-.shadow{
+
+.shadow {
     position: absolute;
-    bottom:0;
-    left:0;
+    bottom: 0;
+    left: 0;
     height: 20vh;
     width: 100vw;
     z-index: 40;
-    background: linear-gradient(to top,rgb(0, 0, 0),transparent);
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
 }
 
 .logo {
     position: absolute;
-    top: 40vh;
-    left: 30vw;
+    top: 5vh;
+    left: 5vw;
     color: white;
+    font-family: Ruso;
+    text-shadow: 3px 3px #333;
     z-index: 20;
-    font-size: 10vw;
+    font-size: 3vw;
+    user-select: none;
+    cursor: pointer;
+}
+
+.logo::after {
+    content: "v.iv";
+    position: absolute;
+    max-width: 0vw;
+    color: orange;
+    left: 0;
+    top: 0;
+    width: 5vw;
+    border-right: 3px solid orange;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.logo:hover::after {
+    max-width: 5vw;
+    transition: 0.3s;
 }
 
 .mountain-img {
@@ -82,4 +125,45 @@ header {
     right: 0;
     overflow: hidden;
     z-index: 9;
+}
+
+.boardguy-img {
+    position: absolute;
+    height: 70vh;
+    top: 10vw;
+    left: 30vw;
+    overflow: hidden;
+    z-index: 20;
+    transition: transform 0.1s;
+}
+
+.top-menu {
+    position: absolute;
+    height: 3vh;
+    width: 3vw;
+    right: 2vw;
+    top: 5vh;
+    z-index: 22;
+    cursor: pointer;
+}
+
+.menu-line {
+    height: 0.30vw;
+    width: 2vw;
+    background-color: #333;
+    border-radius: 10px;
+    margin-bottom: 0.6vh;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: whitesmoke;
+    z-index: 21;
+    max-width: 0;
+    direction: ltr;
+    transition: max-width 0.4s ease-in-out;
+    border-right: 8px solid orange;
 }
