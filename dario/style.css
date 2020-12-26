@@ -11,6 +11,7 @@ body {
     left: 43%;
     color: olivedrab;
     font-size: 3vw;
+    user-select: none;
 }
 
 .back {
@@ -21,10 +22,10 @@ body {
     background-color: aliceblue;
 }
 
-.back:hover+.right-container {
+/* .back:hover+.right-container {
     animation: move-right 1s ease-out;
     width: 30vw;
-}
+} */
 
 .right-container {
     margin: 0;
@@ -34,14 +35,14 @@ body {
     background-color: black;
     width: 50vw;
     height: 100vh;
-    transition: 0.3s linear;
+    transition: 0.5s ease-in-out;
 }
 
-.right-container:hover {
+/* .right-container:hover {
     width: 70vw;
     animation: move 1s ease-out;
     transition: 0.3s linear;
-}
+} */
 
 @keyframes move {
     0% {

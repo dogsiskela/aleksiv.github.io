@@ -42,32 +42,33 @@ header {
     user-select: none;
 }
 
-.loading{
+.loading {
     position: relative;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
     background-color: black;
     z-index: 100;
 }
 
-.loading-item{
-    position:absolute;
+.loading-item {
+    position: absolute;
     width: 3vw;
     height: 1vh;
     background-color: white;
     border-radius: 4px;
     animation: rotate 2s linear infinite;
-    top:50%;
-    left:48.5vw;
+    top: 50%;
+    left: 48.5vw;
 }
+
 @keyframes rotate {
-    from{
-        transform:rotate(0deg);
+    from {
+        transform: rotate(0deg);
     }
-    to{
-        transform:rotate(360deg);
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -179,7 +180,7 @@ header {
 .menu-line {
     height: 0.30vw;
     width: 2vw;
-    background-color: #333;
+    background-color: #383838;
     border-radius: 10px;
     margin-bottom: 0.6vh;
     transition: transform 0.3s, opacity 0.3s;
@@ -190,7 +191,9 @@ header {
     overflow: hidden;
     height: 100vh;
     width: 100vw;
-    background-color: whitesmoke;
+    background: url("./images/menu.jpg");
+    background-size: 100vw;
+    box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.726);
     z-index: 21;
     max-width: 0;
     direction: ltr;
@@ -198,18 +201,50 @@ header {
     border-right: 8px solid orange;
 }
 
-.menu-el {
+.menu-h1 {
+    font-size: 7vw;
+    font-family: Helvetica;
+    padding-left: 3vw;
+    color: orange;
+    opacity:0;
+    text-shadow: -6px 3px 10px #333333;
+    margin: 5vh 0 8vh 5vw;
     width: 100vw;
-    font-size: 4vw;
-    font-family: Ruso;
-    margin-left: 10vw;
-    border-bottom: 4px solid black;
-    cursor: pointer;
-    margin-bottom: 4vh;
 }
 
-.menu-el:hover:after{
+.menu-el {
+    width: 20vw;
+    height: 8vh;
+    font-size: 3vw;
+    font-family: SF;
+    margin-left: 13vw;
+    padding-left: 2vw;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.308), transparent);
+    border-radius: 30px;
+    line-height: 8vh;
+    color: #dfdfdf;
+    cursor: pointer;
+    margin-bottom: 4vh;
+    transition: 0.3s;
+}
+
+
+.menu-el:hover {
+    width: 30vw;
+    transition: 0.3s;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.486), transparent);
+}
+
+.menu-el:hover:after {
     width: 100vw;
+    margin-left: 2vw;
     content: "<";
-    color:orange;
+    color: orange;
+}
+
+.menu-el:hover:before {
+    width: 100vw;
+    margin-right: 2vw;
+    content: ">";
+    color: orange;
 }
