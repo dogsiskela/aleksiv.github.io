@@ -207,6 +207,7 @@ header {
     cursor: pointer;
     margin-bottom: 4vh;
 }
+
 .menu-el:hover:after{
     width: 100vw;
     content: "<";

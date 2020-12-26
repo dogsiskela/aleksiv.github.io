@@ -1,0 +1,68 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+
+.header-side {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    color: olivedrab;
+    font-size: 3vw;
+}
+
+.back {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: aliceblue;
+}
+
+.back:hover+.right-container {
+    animation: move-right 1s ease-out;
+    width: 30vw;
+}
+
+.right-container {
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: black;
+    width: 50vw;
+    height: 100vh;
+    transition: 0.3s linear;
+}
+
+.right-container:hover {
+    width: 70vw;
+    animation: move 1s ease-out;
+    transition: 0.3s linear;
+}
+
+@keyframes move {
+    0% {
+        width: 50vw;
+    }
+    40% {
+        width: 80vw;
+    }
+    75% {
+        width: 70vw;
+    }
+}
+
+@keyframes move-right {
+    0% {
+        width: 50vw;
+    }
+    40% {
+        width: 20vw;
+    }
+    75% {
+        width: 30vw;
+    }
+}
