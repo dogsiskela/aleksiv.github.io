@@ -183,7 +183,7 @@ header {
     background-color: #383838;
     border-radius: 10px;
     margin-bottom: 0.6vh;
-    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.4s linear;
 }
 
 .menu-overlay {
@@ -198,7 +198,7 @@ header {
     max-width: 0;
     direction: ltr;
     transition: max-width 0.4s ease-in-out;
-    border-right: 8px solid orange;
+    border-right: 4px solid orange;
 }
 
 .menu-h1 {
@@ -206,45 +206,69 @@ header {
     font-family: Helvetica;
     padding-left: 3vw;
     color: orange;
-    opacity:0;
+    opacity: 0;
     text-shadow: -6px 3px 10px #333333;
     margin: 5vh 0 8vh 5vw;
     width: 100vw;
 }
 
 .menu-el {
-    width: 20vw;
-    height: 8vh;
-    font-size: 3vw;
+    width: 28vw;
+    height: 7h;
+    font-size: 1.8vw;
     font-family: SF;
-    margin-left: 13vw;
-    padding-left: 2vw;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.308), transparent);
-    border-radius: 30px;
-    line-height: 8vh;
+    margin-left: 10vw;
+    padding-left: 1.5vw;
+    background: linear-gradient(to right, rgba(199, 199, 199, 0.100), transparent);
+    border-radius: 10px;
+    line-height: 7vh;
     color: #dfdfdf;
     cursor: pointer;
     margin-bottom: 4vh;
     transition: 0.3s;
 }
 
-
 .menu-el:hover {
     width: 30vw;
     transition: 0.3s;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.486), transparent);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.26), transparent);
 }
 
 .menu-el:hover:after {
     width: 100vw;
     margin-left: 2vw;
-    content: "<";
+    content: " ";
     color: orange;
+}
+
+.menu-el:before {
+    width: 0;
+    content: "";
+    transition: 0.2s ease-in-out;
 }
 
 .menu-el:hover:before {
     width: 100vw;
     margin-right: 2vw;
-    content: ">";
+    transition: 0.2s ease-in-out;
     color: orange;
+}
+
+.social-media-i {
+    height: 10vw;
+    width: 10vw;
+    border-right: 2px solid #dfdfdf;
+    position: absolute;
+    justify-items: right;
+    padding: 20vh 2vw 10vh 0;
+    margin: 23vh 10vw 0 0;
+    right: 0;
+    top: 0;
+    display: grid;
+    grid-template-columns: 10vw;
+    grid-template-rows: 4vw 4vw;
+}
+
+.icon-i {
+    cursor: pointer;
 }

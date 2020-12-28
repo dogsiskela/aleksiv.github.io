@@ -38,6 +38,9 @@ function menuMutate() {
         menu.children[0].style.transform = "rotate(45deg) translateY(1vh)";
         menu.children[1].style.opacity = "0";
         menu.children[2].style.transform = "rotate(-45deg) translateY(-2vh) translateX(0.1vw)";
+        Array.from(menu.children).forEach((el) => {
+            el.style.backgroundColor = "#dfdfdf";
+        })
         document.getElementsByClassName("menu-overlay")[0].style.maxWidth = "100vw";
         menuOpen = true;
     }
@@ -45,6 +48,9 @@ function menuMutate() {
         menu.children[0].style.transform = "none";
         menu.children[1].style.opacity = "1";
         menu.children[2].style.transform = "none";
+        Array.from(menu.children).forEach((el) => {
+            el.style.backgroundColor = "#383838";
+        })
         document.getElementsByClassName("menu-overlay")[0].style.maxWidth = "0vw";
         menuOpen = false;
     }
