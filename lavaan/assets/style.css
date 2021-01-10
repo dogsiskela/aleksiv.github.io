@@ -194,7 +194,7 @@
     .scroll-i-anim {
         margin-top: 2px;
         align-self: center;
-        animation: scrollDown 3s infinite;
+        animation: scrollDown 2s infinite;
     }
 
     .download-icons {
@@ -209,15 +209,15 @@
         cursor: pointer;
     }
 
+    .download-icon-android {
+        left: 19vw;
+        z-index: 3;
+    }
+
     @media only screen and (max-width: 1300px) {
         .download-icon {
             height: 50px;
         }
-    }
-
-    .download-icon-android {
-        left: 19vw;
-        z-index: 3;
     }
 
     @media only screen and (max-width: 1000px) {
@@ -226,12 +226,33 @@
         }
     }
 
+    @media only screen and (max-width:800px) {
+        .download-icon-android {
+            left: 35vw;
+        }
+        .download-icon {
+            height: 50px
+        }
+    }
+
+    @media only screen and (max-width:479px) {
+        .download-icon-android {
+            left: 45vw;
+        }
+    }
+
     .download-icon:hover {
         transform: translateY(5px);
         transition: transform 0.3s;
     }
 
-    .screenshot {
+    @media only screen and (max-width: 800px) {
+        .screenshot {
+            visibility: hidden;
+        }
+        .logo-head-text-alignment {
+            width: 80vw;
+        }
     }
 
     .head-screenshot {
@@ -340,6 +361,41 @@
         text-align: center;
     }
 
+    @media only screen and (max-width: 680px) {
+        .create-profile-i {
+            height: 17vw;
+            margin-left: 8vw;
+        }
+        .profile-img-over {
+            margin-left: 18vw;
+        }
+        .create-profile-container {
+            height: 45vh;
+        }
+        .post-create-text-alignment {
+            margin-top: 8vh;
+        }
+    }
+
+    @media only screen and (max-width: 520px) {
+        .post-create-text-alignment {
+            margin-top: 10vh;
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .create-profile-i {
+            height: 18vw;
+            margin-left: 8vw;
+        }
+        .profile-img-over {
+            margin-left: 18vw;
+        }
+        .post-create-text-alignment {
+            margin-top: 12vh;
+        }
+    }
+
     /* ============================== UNIQUE PROPOSITION =============================== */
 
     .unique-proposition-container {
@@ -352,7 +408,7 @@
         height: 25vh;
         width: 60vw;
         margin-left: -60vw;
-        transition: margin-left 0.3s;
+        transition: margin-left 1s;
         overflow: hidden;
     }
 
@@ -385,6 +441,24 @@
         }
     }
 
+    @media only screen and (max-width: 540px) {
+        .u-p-text {
+            font-size: 13px;
+        }
+        .u-p-1 {
+            height: 30vh;
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .u-p-text {
+            font-size: 13px;
+        }
+        .u-p-1 {
+            height: 33vh;
+        }
+    }
+
     .first-el {
         background-color: #E3614D;
     }
@@ -397,7 +471,7 @@
         background-color: #f78d7d;
     }
 
-    /* ============================== FOOTER =============================== */
+    /* ============================== PRE SIGNUP =============================== */
 
     .form-container {
         display: grid;
@@ -426,17 +500,21 @@
         color: #f78d7d;
     }
 
+    .presignup:focus {
+        border: 2px solid #E3614D;
+    }
+
     input:focus {
         outline: none;
         border: none;
     }
 
     .signup-button {
-        margin: 5.9vh 0 0 0;
+        margin: 6vh 0 0 0;
         position: absolute;
-        right: 22.5vw;
+        right: 23vw;
         height: 50px;
-        width: 50px;
+        width: 100px;
         border-radius: 1000px;
         background-color: #E3614D;
         border: none;
@@ -449,6 +527,22 @@
     .signup-button:hover {
         background-color: #EB886A;
         color: white;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .presignup{
+            font-size:20px;
+        }
+    }
+    @media only screen and (max-width: 650px) {
+        .presignup{
+            width:80vw;
+            margin-left:5vw;
+            padding-left:3vw;
+        }
+        .signup-button{
+            right:7vw;
+        }
     }
 
     /* ============================== FOOTER =============================== */
