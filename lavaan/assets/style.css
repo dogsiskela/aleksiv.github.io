@@ -64,12 +64,15 @@
 
     html {
         overflow-y: hidden;
+        overflow-x: hidden;
+        width: 100%;
     }
 
     .body {
         margin: 0;
         padding: 0;
         overflow-x: hidden;
+        width: 100%;
     }
 
     .header-container {
@@ -319,6 +322,7 @@
         height: 55vh;
         width: 100vw;
         background-color: ghostwhite;
+        overflow: hidden;
     }
 
     .create-profile-grid {
@@ -344,6 +348,7 @@
 
     .create-profile-i {
         margin-top: 5vh;
+        width: 70vw;
         display: flex;
         justify-content: center;
         padding-left: 10vw;
@@ -364,7 +369,8 @@
     @media only screen and (max-width: 680px) {
         .create-profile-i {
             height: 17vw;
-            margin-left: 8vw;
+            margin-left: 3vw;
+            width: 90vw;
         }
         .profile-img-over {
             margin-left: 18vw;
@@ -386,7 +392,9 @@
     @media only screen and (max-width: 479px) {
         .create-profile-i {
             height: 18vw;
-            margin-left: 8vw;
+            margin-left: 10vw;
+            padding:0;
+            width: 90vw;
         }
         .profile-img-over {
             margin-left: 18vw;
@@ -530,18 +538,19 @@
     }
 
     @media only screen and (max-width: 800px) {
-        .presignup{
-            font-size:20px;
+        .presignup {
+            font-size: 20px;
         }
     }
+
     @media only screen and (max-width: 650px) {
-        .presignup{
-            width:80vw;
-            margin-left:5vw;
-            padding-left:3vw;
+        .presignup {
+            width: 80vw;
+            margin-left: 5vw;
+            padding-left: 3vw;
         }
-        .signup-button{
-            right:7vw;
+        .signup-button {
+            right: 7vw;
         }
     }
 
