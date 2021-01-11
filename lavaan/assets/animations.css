@@ -28,6 +28,18 @@
     }
 }
 
+@keyframes pulsateLogoSmall {
+    0% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    100% {
+        transform: scale(0.5);
+    }
+}
+
 @keyframes noticeMe {
     0% {
         transform: rotate(0deg)

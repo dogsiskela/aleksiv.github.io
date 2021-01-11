@@ -130,6 +130,20 @@
         animation: ballLoading 3s infinite;
     }
 
+    @media only screen and (max-width: 350px) {
+        .loading-container img {
+            height: 50px;
+            animation: pulsateLogoSmall 3s infinite;
+        }
+        .loading-text {
+            font-size: 18px;
+            margin-left: 15vw;
+        }
+        .loading-ball{
+            margin-left:45vw;
+        }
+    }
+
     /* ============================== HEADER =============================== */
 
     .header {
@@ -241,6 +255,37 @@
     @media only screen and (max-width:479px) {
         .download-icon-android {
             left: 45vw;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .loading-container img {
+            height: 150px;
+        }
+        .logo-head-img {
+            height: 60px;
+        }
+        .header {
+            height: 100vh;
+        }
+        .header-container {
+            height: 100vh;
+        }
+        .header-info-container {
+            margin-top: 8vh;
+        }
+        .logo-head-regular-text {
+            font-size: 13px;
+        }
+        .logo-head-light-text {
+            font-size: 15px;
+        }
+        .logo-head-scroll-alignment {
+            bottom: 80vh;
+            right: 7vw;
+        }
+        .download-icon {
+            height: 40px;
         }
     }
 
@@ -393,14 +438,20 @@
         .create-profile-i {
             height: 18vw;
             margin-left: 10vw;
-            padding:0;
-            width: 90vw;
+            padding: 0;
+            width: 80vw;
         }
         .profile-img-over {
             margin-left: 18vw;
         }
         .post-create-text-alignment {
             margin-top: 12vh;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .logo-head-accent-text {
+            font-size: 25px;
         }
     }
 
@@ -463,7 +514,16 @@
             font-size: 13px;
         }
         .u-p-1 {
-            height: 33vh;
+            height: 34vh;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .u-p-text {
+            font-size: 12px;
+        }
+        .u-p-1 {
+            height: 45vh;
         }
     }
 
@@ -554,6 +614,18 @@
         }
     }
 
+    @media only screen and (max-width: 350px) {
+        .presignup {
+            font-size: 16px;
+            width: 65vw;
+            padding-right: 23vw;
+        }
+        .signup-button {
+            width: 60px;
+            right: 5vw;
+        }
+    }
+
     /* ============================== FOOTER =============================== */
 
     .footer-container {
@@ -584,4 +656,21 @@
         font-family: MonsterratB;
         color: #333;
         font-size: 22px;
+    }
+
+    @media only screen and (max-width: 350px) {
+        .footer-divider {
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+            height: 1px;
+        }
+        .footer-copyright-text {
+            font-size: 16px;
+        }
+        .footer-grid-socials {
+            position: relative;
+            font-size: 18px;
+            left: 35vw;
+            top: 2vh;
+        }
     }
