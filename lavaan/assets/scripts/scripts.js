@@ -5,27 +5,39 @@ var downloadButtons = document.getElementsByClassName('download-icon')
 var screenshotElements = document.getElementsByClassName('screenshot-el')
 var uniqueProp = document.getElementsByClassName('unique-proposition-container')[0]
 var uniquePropList = document.getElementsByClassName('u-p-1')
+var uniquePropList2 = document.getElementsByClassName('u-p-2')
 var preSignup = document.getElementsByClassName('form-container')[0]
 
+var scrolling;
+
+setInterval(function () {
+    if (scrolling) {
+        scrolling = false;
+        console.log('exec');
+        let scroll = window.pageYOffset;
+        document.getElementById("profile-img-over").style.transform = "translateX(" + scroll * 0.09 + "vw)";
+        for (var i = 0; i < uniquePropList.length; i++) {
+            if (uniquePropList[i].getBoundingClientRect().top - 500 < 0) {
+                uniquePropList[i].style.marginLeft = "0vw"
+                uniquePropList2[i].style.right = "-20.2vw"
+            }
+            else if (uniquePropList[i].getBoundingClientRect().top - 500 >= 0) {
+                uniquePropList[i].style.marginLeft = "-100vw"
+                uniquePropList2[i].style.right = "-60vw"
+            }
+        }
+        if (preSignup.getBoundingClientRect().top - 500 >= 0) {
+            preSignup.style.opacity = "0%"
+        }
+        else if (preSignup.getBoundingClientRect().top - 500 < 0) {
+            preSignup.style.opacity = "100%"
+        }
+    }
+}, 30);
+
 window.addEventListener('scroll', () => {
-    let scroll = window.pageYOffset;
-    document.getElementById("profile-img-over").style.transform = "translateX(" + scroll * 0.09 + "vw)";
-    for (var i = 0; i < uniquePropList.length; i++) {
-        if (uniquePropList[i].getBoundingClientRect().top - 500 < 0) {
-            uniquePropList[i].style.marginLeft = "0vw"
-        }
-        if (uniquePropList[i].getBoundingClientRect().top - 500 >= 0) {
-            uniquePropList[i].style.marginLeft = "-100vw"
-        }
-    }
-    if (preSignup.getBoundingClientRect().top - 500 >= 0) {
-        preSignup.style.opacity = "0%"
-    }
-    console.log(preSignup.getBoundingClientRect().top - 500)
-    if (preSignup.getBoundingClientRect().top - 500 < 0) {
-        preSignup.style.opacity = "100%"
-    }
-})
+    scrolling = true;
+}, { capture: false, passive: true })
 
 var onMouseMoveHandler = function (event) {
     update(event);
@@ -83,3 +95,4 @@ setTimeout(function () {
     }, 3000)
 
 }, 3000)
+

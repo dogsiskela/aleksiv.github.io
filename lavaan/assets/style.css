@@ -79,7 +79,9 @@
         position: absolute;
         margin: 0;
         padding: 0;
-        background: linear-gradient(to bottom, #E3614D, #EB886A);
+        background: url('./images/BLOG_THUMB_Wd8505KUB.jpg');
+        background-size: cover;
+        box-shadow: inset 0 0 0 100vmax #0c040383;
         height: 100vh;
         width: 100vw;
         overflow: hidden;
@@ -139,8 +141,8 @@
             font-size: 18px;
             margin-left: 15vw;
         }
-        .loading-ball{
-            margin-left:45vw;
+        .loading-ball {
+            margin-left: 45vw;
         }
     }
 
@@ -304,61 +306,80 @@
     }
 
     .head-screenshot {
-        position: absolute;
+        position: relative;
         right: 15vw;
         top: 10vh;
         transition: transform 0.3s;
     }
 
-    .screenshot-el {
+    .head-phone {
         position: absolute;
+        right: 120px;
+        top: 10vh;
+        height: 620px;
+        transition: transform 0.3s;
+
+    }
+
+    @media only screen and (max-width:1250px) {
+        .head-phone {
+            right: 5vw;
+        }
+    }
+
+    @media only screen and (max-width:1100px) {
+        .head-phone {
+            right: 2vw;
+        }
+    }
+
+    @media only screen and (max-width:960px) {
+        .head-phone {
+            right: -3vw;
+        }
+    }
+
+    .head-profile {
+        height: 55px;
+        position: relative;
+        left: 108.2px;
+        top: 44.3px
+    }
+
+    .screenshot-el {
+        position: relative;
         height: 45px;
+        margin: 5px;
         transform: scale(0);
         transition: transform 0.3s;
     }
 
+    .screenshot-el-container {
+        height: auto;
+        width: 300px;
+        margin-right: 112px;
+        padding-top: 52px;
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+    }
+
     .screenshot-el1 {
-        right: 18vw;
-        top: 24vh;
         transform-origin: left;
     }
 
-    .screenshot-el2 {
+    .screenshot-el2, .screenshot-el5, .screenshot-el7 {
         transform-origin: right;
-        right: 16vw;
-        top: 31.5vh;
+        left: 38px;
     }
 
-    .screenshot-el3 {
-        right: 18vw;
-        top: 40vh;
+    .screenshot-el3, .screenshot-el6 {
         transform-origin: left;
     }
 
     .screenshot-el4 {
-        right: 10.4vw;
-        top: 47vh;
-        height: 25px;
         transform-origin: center;
-        width: 30vw;
-    }
-
-    .screenshot-el5 {
-        transform-origin: right;
-        right: 16vw;
-        top: 52.5vh;
-    }
-
-    .screenshot-el6 {
-        right: 18vw;
-        top: 60vh;
-        transform-origin: left;
-    }
-
-    .screenshot-el7 {
-        transform-origin: right;
-        right: 16vw;
-        top: 67.5vh;
+        height: 25px;
     }
 
     /* ============================== CREATE PROFILE =============================== */
@@ -469,6 +490,25 @@
         margin-left: -60vw;
         transition: margin-left 1s;
         overflow: hidden;
+        overflow-y: hidden;
+    }
+
+    .u-p-2 {
+        height: 25vh;
+        width: 60vw;
+        position: absolute;
+        right: -60.2vw;
+        transition: right 1s;
+        overflow: hidden;
+    }
+
+    .unique-proposition-container img {
+        object-fit: cover;
+        object-position: center;
+        margin: 0;
+        padding: 0;
+        height: 25vh;
+        width: 40vw;
     }
 
     .u-p-bold-text {
@@ -494,6 +534,9 @@
     @media only screen and (max-width: 1000px) {
         .u-p-1 {
             width: 100%;
+        }
+        .u-p-2 {
+            display: none;
         }
         .u-p-text {
             font-size: 13px;
@@ -552,16 +595,58 @@
         display: flex;
         align-content: center;
         justify-content: center;
-        width: 50vw;
+        width: 47vw;
         margin: 5vh 0 0 21vw;
-        height: 60px;
+        height: 70px;
         font-size: 45px;
         color: #333;
         font-family: MonsterratB;
         border: 2px solid #E3614D;
         border-radius: 100px;
         padding-left: 1.5vw;
-        padding-right: 5vw;
+        padding-right: 8vw;
+    }
+
+    @media only screen and (max-width:1300px) {
+        .presignup {
+            width: 45vw;
+            padding-right: 10vw;
+        }
+    }
+
+    @media only screen and (max-width:1200px) {
+        .presignup {
+            width: 44vw;
+            padding-right: 11vw;
+        }
+    }
+
+    @media only screen and (max-width:1000px) {
+        .presignup {
+            width: 43vw;
+            padding-right: 12vw;
+        }
+    }
+
+    @media only screen and (max-width:900px) {
+        .presignup {
+            width: 41vw;
+            padding-right: 14vw;
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        .presignup {
+            width: 39vw;
+            padding-right: 16vw;
+        }
+    }
+
+    @media only screen and (max-width:700px) {
+        .presignup {
+            width: 37vw;
+            padding-right: 18vw;
+        }
     }
 
     .presignup::placeholder {
@@ -581,7 +666,7 @@
         margin: 6vh 0 0 0;
         position: absolute;
         right: 23vw;
-        height: 50px;
+        height: 60px;
         width: 100px;
         border-radius: 1000px;
         background-color: #E3614D;
@@ -605,12 +690,40 @@
 
     @media only screen and (max-width: 650px) {
         .presignup {
-            width: 80vw;
+            width: 65vw;
             margin-left: 5vw;
             padding-left: 3vw;
+            padding-right: 13vw;
         }
         .signup-button {
-            right: 7vw;
+            right: 14vw;
+            width: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 530px) {
+        .presignup {
+            width: 60vw;
+            margin-left: 5vw;
+            padding-left: 3vw;
+            padding-right: 18vw;
+        }
+        .signup-button {
+            right: 14vw;
+            width: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .presignup {
+            width: 57vw;
+            margin-left: 5vw;
+            padding-left: 3vw;
+            padding-right: 21vw;
+        }
+        .signup-button {
+            right: 14vw;
+            width: 60px;
         }
     }
 
@@ -621,7 +734,9 @@
             padding-right: 23vw;
         }
         .signup-button {
-            width: 60px;
+            width: 50px;
+            margin-top: 50px;
+            height: 50px;
             right: 5vw;
         }
     }
