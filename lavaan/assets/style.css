@@ -485,7 +485,7 @@
     }
 
     .u-p-1 {
-        height: 25vh;
+        height: 30vh;
         width: 60vw;
         margin-left: -60vw;
         transition: margin-left 1s;
@@ -494,7 +494,7 @@
     }
 
     .u-p-2 {
-        height: 25vh;
+        height: 30vh;
         width: 60vw;
         position: absolute;
         right: -60.2vw;
@@ -507,7 +507,7 @@
         object-position: center;
         margin: 0;
         padding: 0;
-        height: 25vh;
+        height: 30vh;
         width: 40vw;
     }
 
