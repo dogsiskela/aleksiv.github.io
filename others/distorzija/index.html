@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="mk">
+
+<head>
+    <title>
+        Distorzija
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---------------------------------------------------------------------------------->
+    <link rel="icon" type="image/png" href="./assets/Final.ico" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="./styles/util.css" />
+    <!---------------------------------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---------------------------------------------------------------------------------->
+
+</head>
+
+<body id="body" class="lock" style="display: none;">
+    <div class="wrapper right" onclick="onClick('./forum/forum')">
+        <div class="content-area right-allign">
+            ФОРУМ
+        </div>
+        <div class="content-area-link right-allign-link">
+            forum.distorzija.mk
+        </div>
+    </div>
+
+    <div class="slider">
+        <div class="wrapper left" onclick="onClick('./radio/radio')">
+            <div class=" content-area left-allign">
+                РАДИО
+            </div>
+            <div class="content-area-link left-allign-link">
+                radio.distorzija.mk
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function onClick(s) {
+        window.location.href = s + ".html";
+    }
+    $(document).ready(function () {
+        $('#body').show();
+    });
+</script>

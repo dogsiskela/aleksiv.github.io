@@ -1,0 +1,791 @@
+    @import "animations.css";
+    @font-face {
+        font-family: SF;
+        src: url("../assets/fonts/SF.otf");
+    }
+
+    @font-face {
+        font-family: Pangolin;
+        src: url("../assets/fonts/Pangolin-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: Ruso;
+        src: url("../assets/fonts/RussoOne-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: MonsterratR;
+        src: url("../assets/fonts/Montserrat-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: MonsterratL;
+        src: url("../assets/fonts/Montserrat-Light.ttf");
+    }
+
+    @font-face {
+        font-family: MonsterratB;
+        src: url("../assets/fonts/Montserrat-Bold.ttf");
+    }
+
+    @font-face {
+        font-family: MonsterratM;
+        src: url("../assets/fonts/Montserrat-Medium.ttf");
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: whitesmoke;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: #333;
+    }
+
+    .color-m {
+        color: #E3614D;
+    }
+
+    /* =========================== LANDING ================================== */
+
+    * {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    header {
+        position: relative;
+    }
+
+    html {
+        overflow-y: hidden;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .header-container {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        background: url('./images/BLOG_THUMB_Wd8505KUB.jpg');
+        background-size: cover;
+        box-shadow: inset 0 0 0 100vmax #0c040383;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .bottom-shadow {
+        height: 15vh;
+        width: 100vw;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.212), transparent, transparent);
+    }
+
+    .loading-container {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #E3614D, #EB886A);
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .loading-container img {
+        height: 200px;
+        transform-origin: center;
+        animation: pulsateLogo 3s infinite;
+    }
+
+    .loading-text {
+        color: whitesmoke;
+        font-family: MonsterratR;
+        font-weight: 300;
+        font-size: 20px;
+        margin: 30px 0 0 100px;
+    }
+
+    .loading-ball {
+        height: 10px;
+        width: 10px;
+        border-radius: 100px;
+        background-color: whitesmoke;
+        margin: 20px 0 0 200px;
+        animation: ballLoading 3s infinite;
+    }
+
+    @media only screen and (max-width: 350px) {
+        .loading-container img {
+            height: 50px;
+            animation: pulsateLogoSmall 3s infinite;
+        }
+        .loading-text {
+            font-size: 18px;
+            margin-left: 15vw;
+        }
+        .loading-ball {
+            margin-left: 45vw;
+        }
+    }
+
+    /* ============================== HEADER =============================== */
+
+    .header {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    }
+
+    .header-info-container {
+        margin: 15vh 0 0 5vw;
+    }
+
+    .logo-head-img {}
+
+    .logo-head-accent-text {
+        font-family: MonsterratB;
+        color: white;
+        font-size: 19px;
+    }
+
+    .logo-head-regular-text {
+        font-family: MonsterratR;
+        color: white;
+        font-size: 18px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .logo-head-regular-text {
+            font-size: 15px;
+        }
+    }
+
+    .logo-head-light-text {
+        font-family: MonsterratL;
+        color: whitesmoke;
+        font-size: 18px;
+    }
+
+    .logo-head-text-alignment {
+        width: 40vw;
+        margin: 20px 0 10px 0;
+    }
+
+    .scroll-nav {
+        display: grid;
+        grid-template-columns: 44px 300px;
+    }
+
+    .logo-head-scroll-alignment {
+        transform-origin: right;
+        position: absolute;
+        right: 4vw;
+        bottom: 48vh;
+        transform: rotate(-90deg);
+    }
+
+    .scroll-down-i {
+        color: whitesmoke;
+        font-size: 30px;
+        align-self: center;
+    }
+
+    .scroll-i-anim {
+        margin-top: 2px;
+        align-self: center;
+        animation: scrollDown 2s infinite;
+    }
+
+    .download-icons {
+        margin: 4vh 0 0 4vw;
+    }
+
+    .download-icon {
+        position: absolute;
+        margin: 0 1vw 0 1vw;
+        transition: transform 0.3s;
+        height: 68px;
+        cursor: pointer;
+    }
+
+    .download-icon-android {
+        left: 19vw;
+        z-index: 3;
+    }
+
+    @media only screen and (max-width: 1300px) {
+        .download-icon {
+            height: 50px;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .download-icon {
+            height: 40px;
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        .download-icon-android {
+            left: 35vw;
+        }
+        .download-icon {
+            height: 50px
+        }
+    }
+
+    @media only screen and (max-width:479px) {
+        .download-icon-android {
+            left: 45vw;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .loading-container img {
+            height: 150px;
+        }
+        .logo-head-img {
+            height: 60px;
+        }
+        .header {
+            height: 100vh;
+        }
+        .header-container {
+            height: 100vh;
+        }
+        .header-info-container {
+            margin-top: 8vh;
+        }
+        .logo-head-regular-text {
+            font-size: 13px;
+        }
+        .logo-head-light-text {
+            font-size: 15px;
+        }
+        .logo-head-scroll-alignment {
+            bottom: 80vh;
+            right: 7vw;
+        }
+        .download-icon {
+            height: 40px;
+        }
+    }
+
+    .download-icon:hover {
+        transform: translateY(5px);
+        transition: transform 0.3s;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .screenshot {
+            visibility: hidden;
+        }
+        .logo-head-text-alignment {
+            width: 80vw;
+        }
+    }
+
+    .head-screenshot {
+        position: relative;
+        right: 15vw;
+        top: 10vh;
+        transition: transform 0.3s;
+    }
+
+    .head-phone {
+        position: absolute;
+        right: 120px;
+        top: 10vh;
+        height: 620px;
+        transition: transform 0.3s;
+
+    }
+
+    @media only screen and (max-width:1250px) {
+        .head-phone {
+            right: 5vw;
+        }
+    }
+
+    @media only screen and (max-width:1100px) {
+        .head-phone {
+            right: 2vw;
+        }
+    }
+
+    @media only screen and (max-width:960px) {
+        .head-phone {
+            right: -3vw;
+        }
+    }
+
+    .head-profile {
+        height: 55px;
+        position: relative;
+        left: 108.2px;
+        top: 44.3px
+    }
+
+    .screenshot-el {
+        position: relative;
+        height: 45px;
+        margin: 5px;
+        transform: scale(0);
+        transition: transform 0.3s;
+    }
+
+    .screenshot-el-container {
+        height: auto;
+        width: 300px;
+        margin-right: 112px;
+        padding-top: 52px;
+        background-color: transparent;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .screenshot-el1 {
+        transform-origin: left;
+    }
+
+    .screenshot-el2, .screenshot-el5, .screenshot-el7 {
+        transform-origin: right;
+        left: 38px;
+    }
+
+    .screenshot-el3, .screenshot-el6 {
+        transform-origin: left;
+    }
+
+    .screenshot-el4 {
+        transform-origin: center;
+        height: 25px;
+    }
+
+    /* ============================== CREATE PROFILE =============================== */
+
+    .create-profile-container {
+        height: 55vh;
+        width: 100vw;
+        background-color: ghostwhite;
+        overflow: hidden;
+    }
+
+    .create-profile-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .create-profile-img {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .profile-img-over {
+        height: 30vh;
+        position: relative;
+        width: 100vw;
+        background-color: ghostwhite;
+    }
+
+    .create-profile-i {
+        margin-top: 5vh;
+        width: 70vw;
+        display: flex;
+        justify-content: center;
+        padding-left: 10vw;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .post-create-text-alignment {
+        display: flex;
+        margin-top: 15vh;
+        font-size: 30px;
+        justify-content: center;
+        text-justify: center;
+        color: #E3614D;
+        text-align: center;
+    }
+
+    @media only screen and (max-width: 680px) {
+        .create-profile-i {
+            height: 17vw;
+            margin-left: 3vw;
+            width: 90vw;
+        }
+        .profile-img-over {
+            margin-left: 18vw;
+        }
+        .create-profile-container {
+            height: 45vh;
+        }
+        .post-create-text-alignment {
+            margin-top: 8vh;
+        }
+    }
+
+    @media only screen and (max-width: 520px) {
+        .post-create-text-alignment {
+            margin-top: 10vh;
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .create-profile-i {
+            height: 18vw;
+            margin-left: 10vw;
+            padding: 0;
+            width: 80vw;
+        }
+        .profile-img-over {
+            margin-left: 18vw;
+        }
+        .post-create-text-alignment {
+            margin-top: 12vh;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .logo-head-accent-text {
+            font-size: 25px;
+        }
+    }
+
+    /* ============================== UNIQUE PROPOSITION =============================== */
+
+    .unique-proposition-container {
+        height: auto;
+        width: 100vw;
+        background-color: ghostwhite;
+    }
+
+    .u-p-1 {
+        height: 30vh;
+        width: 60vw;
+        margin-left: -60vw;
+        transition: margin-left 1s;
+        overflow: hidden;
+        overflow-y: hidden;
+    }
+
+    .u-p-2 {
+        height: 30vh;
+        width: 60vw;
+        position: absolute;
+        right: -60.2vw;
+        transition: right 1s;
+        overflow: hidden;
+    }
+
+    .unique-proposition-container img {
+        object-fit: cover;
+        object-position: center;
+        margin: 0;
+        padding: 0;
+        height: 30vh;
+        width: 40vw;
+    }
+
+    .u-p-bold-text {
+        color: whitesmoke;
+        font-size: 17px;
+        padding: 3vh 2vw 0vh 2vw;
+        font-family: MonsterratB;
+    }
+
+    .u-p-text {
+        color: whitesmoke;
+        font-size: 16px;
+        padding: 2vh 2vw 2vh 2vw;
+        font-family: MonsterratL;
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .u-p-text {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .u-p-1 {
+            width: 100%;
+        }
+        .u-p-2 {
+            display: none;
+        }
+        .u-p-text {
+            font-size: 13px;
+        }
+    }
+
+    @media only screen and (max-width: 540px) {
+        .u-p-text {
+            font-size: 13px;
+        }
+        .u-p-1 {
+            height: 30vh;
+        }
+    }
+
+    @media only screen and (max-width: 479px) {
+        .u-p-text {
+            font-size: 13px;
+        }
+        .u-p-1 {
+            height: 34vh;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .u-p-text {
+            font-size: 12px;
+        }
+        .u-p-1 {
+            height: 45vh;
+        }
+    }
+
+    .first-el {
+        background-color: #E3614D;
+    }
+
+    .second-el {
+        background-color: #f17865;
+    }
+
+    .third-el {
+        background-color: #f78d7d;
+    }
+
+    /* ============================== PRE SIGNUP =============================== */
+
+    .form-container {
+        display: grid;
+        padding-top: 5vh;
+        grid-template-columns: auto auto;
+        transition: opacity 0.8s;
+    }
+
+    .presignup {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 47vw;
+        margin: 5vh 0 0 21vw;
+        height: 70px;
+        font-size: 45px;
+        color: #333;
+        font-family: MonsterratB;
+        border: 2px solid #E3614D;
+        border-radius: 100px;
+        padding-left: 1.5vw;
+        padding-right: 8vw;
+    }
+
+    @media only screen and (max-width:1300px) {
+        .presignup {
+            width: 45vw;
+            padding-right: 10vw;
+        }
+    }
+
+    @media only screen and (max-width:1200px) {
+        .presignup {
+            width: 44vw;
+            padding-right: 11vw;
+        }
+    }
+
+    @media only screen and (max-width:1000px) {
+        .presignup {
+            width: 43vw;
+            padding-right: 12vw;
+        }
+    }
+
+    @media only screen and (max-width:900px) {
+        .presignup {
+            width: 41vw;
+            padding-right: 14vw;
+        }
+    }
+
+    @media only screen and (max-width:800px) {
+        .presignup {
+            width: 39vw;
+            padding-right: 16vw;
+        }
+    }
+
+    @media only screen and (max-width:700px) {
+        .presignup {
+            width: 37vw;
+            padding-right: 18vw;
+        }
+    }
+
+    .presignup::placeholder {
+        color: #f78d7d;
+    }
+
+    .presignup:focus {
+        border: 2px solid #E3614D;
+    }
+
+    input:focus {
+        outline: none;
+        border: none;
+    }
+
+    .signup-button {
+        margin: 6vh 0 0 0;
+        position: absolute;
+        right: 23vw;
+        height: 60px;
+        width: 100px;
+        border-radius: 1000px;
+        background-color: #E3614D;
+        border: none;
+        color: white;
+        font-size: 18px;
+        font-family: MonsterratB;
+        cursor: pointer;
+    }
+
+    .signup-button:hover {
+        background-color: #EB886A;
+        color: white;
+    }
+
+    @media only screen and (max-width: 800px) {
+        .presignup {
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 650px) {
+        .presignup {
+            width: 65vw;
+            margin-left: 5vw;
+            padding-left: 3vw;
+            padding-right: 13vw;
+        }
+        .signup-button {
+            right: 14vw;
+            width: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 530px) {
+        .presignup {
+            width: 60vw;
+            margin-left: 5vw;
+            padding-left: 3vw;
+            padding-right: 18vw;
+        }
+        .signup-button {
+            right: 14vw;
+            width: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .presignup {
+            width: 57vw;
+            margin-left: 5vw;
+            padding-left: 3vw;
+            padding-right: 21vw;
+        }
+        .signup-button {
+            right: 14vw;
+            width: 60px;
+        }
+    }
+
+    @media only screen and (max-width: 350px) {
+        .presignup {
+            font-size: 16px;
+            width: 65vw;
+            padding-right: 23vw;
+        }
+        .signup-button {
+            width: 50px;
+            margin-top: 50px;
+            height: 50px;
+            right: 5vw;
+        }
+    }
+
+    /* ============================== FOOTER =============================== */
+
+    .footer-container {
+        height: 30vh;
+        width: 100vw;
+        background-color: ghostwhite;
+        position: relative;
+    }
+
+    .footer-divider {
+        height: 2px;
+        width: 90vw;
+        margin: 10vh 0 0 5vw;
+        background-color: rgba(128, 128, 128, 0.322);
+    }
+
+    .footer-copyright-text {
+        font-family: MonsterratR;
+        color: #333;
+        font-size: 22px;
+        margin: 8vh 0 0 5vw;
+    }
+
+    .footer-grid-socials {
+        position: absolute;
+        right: 13vw;
+        top: 15vh;
+        font-family: MonsterratB;
+        color: #333;
+        font-size: 22px;
+    }
+
+    @media only screen and (max-width: 350px) {
+        .footer-divider {
+            margin-bottom: 5vh;
+            margin-top: 5vh;
+            height: 1px;
+        }
+        .footer-copyright-text {
+            font-size: 16px;
+        }
+        .footer-grid-socials {
+            position: relative;
+            font-size: 18px;
+            left: 35vw;
+            top: 2vh;
+        }
+    }

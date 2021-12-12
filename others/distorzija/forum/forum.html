@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<script>
+    currentBlogIndex = 0;
+    function onClick(s) {
+        window.location.href = s + ".html";
+    }
+
+    function coverCarousel() {
+        var index = 0;
+
+    }
+
+    function smoothScroll(target) {
+        var scrollContainer = target;
+        do {
+            scrollContainer = scrollContainer.parentNode;
+            if (!scrollContainer) return;
+            scrollContainer.scrollTop += 1;
+        } while (scrollContainer.scrollTop == 0);
+
+        var targetY = 0;
+        do {
+            if (target == scrollContainer) break;
+            targetY += target.offsetTop;
+        } while (target = target.offsetParent);
+
+        scroll = function (c, a, b, i) {
+            i += 0.7; if (i > 30) return;
+            c.scrollTop = a + (b - a) / 30 * i;
+            setTimeout(function () { scroll(c, a, b, i); }, 2);
+        }
+        // start scrolling
+        scroll(scrollContainer, scrollContainer.scrollTop, targetY + 28, 0);
+    }
+    function testPrint() {
+        console.log('chekichen');
+    }
+    function openLink(link) {
+        window.open(link, '_blank')
+    }
+
+    function blogList(index) {
+        if (index < 0) {
+            currentBlogIndex = 4;
+            index = 4;
+        }
+        else if (index > 4) {
+            currentBlogIndex = 0;
+            index = 0;
+        }
+        document.getElementById('container_blog_list').innerHTML = '';
+        for (var i = 0; i < 5; i++) {
+            if (i === index) {
+                document.getElementById('container_blog_list').innerHTML += '<div class="content-navigation-button" style="background-color: #eb8d45;" id="bSLCT' + i + '"></div>';
+            }
+            else {
+                document.getElementById('container_blog_list').innerHTML += '<div class="content-navigation-button" id="bSLCT' + i + '" onclick="blogList(' + i + ')"></div>';
+            }
+        }
+    }
+    window.onload = function onLaunch() {
+        blogList(currentBlogIndex);
+    }
+
+</script>
+<html lang="mk">
+
+<head>
+    <title>
+        Distorzija
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!---------------------------------------------------------------------------------->
+    <link rel="icon" type="image/png" href="../assets/Final.ico" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="../styles/util.css" />
+    <!---------------------------------------------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!---------------------------------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!---------------------------------------------------------------------------------->
+</head>
+
+<body class="forum-background">
+    <div class="forum-head">
+        <span class="forum-head-navigation">
+            <span id="logo" class="logo-icon" onclick="onClick('index')">
+
+            </span>
+            <span class="logo-text">
+                distorzija
+            </span>
+            <span class="selected" >ДОМА</span>
+            <span class="forum-head-navigation-items" onclick="onClick('file')">НОВОСТИ</span>
+            <span class="forum-head-navigation-items" onclick="onClick('blogs')">БЛОГОВИ</span>
+            <span class="forum-head-navigation-items" onclick="onClick('about')">ЗА НАС</span>
+            <span class="forum-head-navigation-items" onclick="onClick('contact')">КОНТАКТ</span>
+        </span>
+
+        <div class="header-image-container">
+            <div class="carousel-button align-left hover-orange" onclick="testPrint()"><i class="fa fa-caret-left"></i>
+            </div>
+            <div id="header_image" class="header-image"></div>
+            <div class="header-image-title">EX-YU фанк бендови од раните 80-ти </div>
+            <div class="header-image-description">Убава, но длабоко тажна мелодија од 60-те опишувајќи ја меланхолијата
+                и навидум крајот на светот после скршеноУбава, но длабоко тажна мелодија од 60-те опишувајќи ја
+                меланхолијата и навидум крајот на светот после скршено срце.. Дали е навистина крај на светот? Можеби
+                не, но чувствата скоро го доловуваат истото.. срце.. Дали е навистина крај на светот? Можеби не, но
+                чувствата скоро го доловуваат истото.....
+            </div>
+            <div class="header-image-meta">12:00 19/02/2021</div>
+        </div>
+        <div class="carousel-button align-right hover-orange transition-03" onclick="testPrint()"><i
+                class="fa fa-caret-right"></i></div>
+
+        <div onclick="smoothScroll(document.getElementById('main'))" class="scroll-down-container">
+            <i class="fa fa-caret-down scroll-down-i"></i>
+
+        </div>
+    </div>
+    <div id="main" class="main-container">
+        <div class="album-of-week">
+            <div class="text-style-strong" style="background-color: #eb8d45;height: 10vh;margin:0; line-height: 10vh;">
+                Албум на неделата</div>
+            <div style="width:100%;height:0.3vh;background-color: rgb(10,10,10);margin-bottom: 5vh;"></div>
+            <iframe src="https://open.spotify.com/embed/album/6ggO3YVhyonYuFWUPBRyIv" width="75%" height="64.2%"
+                frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            <div class="grid-3">
+                <div class="text-style-content"
+                    style="grid-area: titlel; background-color: rgb(26, 25, 25); color:#eb8d45; border: 0.2vh solid #eb8d45;">
+                    <strong>Наслов</strong></div>
+                <div class="text-style-content aotw-meta" style="grid-area: titler;"> Never
+                    Mind the
+                    Bollocks</div>
+                <div class="text-style-content"
+                    style="grid-area: artistl; background-color: rgb(26, 25, 25); color:#eb8d45; border: 0.2vh solid #eb8d45;">
+                    <strong>Артист</strong></div>
+                <div class="text-style-content aotw-meta" style="grid-area: artistr;"> Sex
+                    Pistols</div>
+                <div class="text-style-content"
+                    style="grid-area: yearl; background-color: rgb(26, 25, 25); color:#eb8d45; border: 0.2vh solid #eb8d45;">
+                    <strong>Година</strong></div>
+                <div class="text-style-content aotw-meta" style="grid-area: yearr;"> 1977
+                </div>
+            </div>
+        </div>
+        <div style="color:white; font-family: RobotoL; padding:6.4vh 0 0 4vw ">Последни блогови</div>
+        <div class="divide-line" style="margin-left: 4vw;"></div>
+        <div class="content-container">
+            <div class="image-container">
+                <div id="blog_image" class="image-content-container">
+                    <div class="image-content-overlay">
+                        <div class="text-style-strong" style="margin: 1vh 1.5vw 0.5vh 2vw">I wish that I knew what I
+                            know
+                            now
+                            When I was stronger</div>
+                        <div class="text-style-content" style="font-size: 1vw; padding: 0 2vw 1vh 2vw;">Poor old
+                            granddad
+                            I laughed at all his words
+                            I thought he was a bitter man
+                            He spoke of woman's ways
+                            They'll trap you, then they use you
+                            Before you even know
+                            For love is blind and you're far too kind</div>
+                    </div>
+                    <div class="image-content-overlay-i" onclick="blogList(--currentBlogIndex)">
+                        <div style="padding-right:50%"><i class="fa fa-caret-left image-content-i"></i></div>
+                    </div>
+                    <div class="image-content-overlay-i" style="right: 0;" onclick="blogList(++currentBlogIndex)">
+                        <div style=" padding-right:50%"><i class="fa fa-caret-right image-content-i"></i></div>
+                    </div>
+                </div>
+                <img src="../assets/images/soundnvision.jpg" alt="Italian Trulli" class="image-side-container">
+                <img src="../assets/images/Black Metalic.jpg" alt="Italian Trulli" class="image-side-container">
+                <img src="../assets/images/If You Leave.jpg" alt="Italian Trulli" class="image-side-container">
+            </div>
+            <div class="container-list" id="container_blog_list" />
+        </div>
+        <div style="color:white; font-family: RobotoL; padding: 18vh 0 0 0vw ">Последни новости</div>
+        <div class="divide-line"></div>
+        <div class="news-grid">
+            <div>
+                <img src="../assets/images/soundnvision.jpg" alt="Italian Trulli" class="news-image-container">
+                <div class="news-text-head"> Sound and vision David Bowie</div>
+                <div class="news-text-content">Those children faces that come to you, those dreams are dead, so splended
+                    too, there's songs and games, there's sickness to. No chains are broken, no rivers crossed, no
+                    sentencess spoken...</div>
+            </div>
+            <div>
+                <img src="../assets/images/Black Metalic.jpg" alt="Italian Trulli" class="news-image-container">
+                <div class="news-text-head"> Sound and vision David Bowie</div>
+                <div class="news-text-content">Those children faces that come to you, those dreams are dead, so splended
+                    too, there's songs and games, there's sickness to. No chains are broken, no rivers crossed, no
+                    sentencess spoken...</div>
+            </div>
+
+            <div>
+                <img src="../assets/images/soundnvision.jpg" alt="Italian Trulli" class="news-image-container">
+                <div class="news-text-head"> Sound and vision David Bowie</div>
+                <div class="news-text-content">Those children faces that come to you, those dreams are dead, so splended
+                    too, there's songs and games, there's sickness to. No chains are broken, no rivers crossed, no
+                    sentencess spoken...</div>
+            </div>
+
+            <div>
+                <img src="../assets/images/Black Metalic.jpg" alt="Italian Trulli" class="news-image-container">
+                <div class="news-text-head"> Sound and vision David Bowie</div>
+                <div class="news-text-content">Those children faces that come to you, those dreams are dead, so splended
+                    too, there's songs and games, there's sickness to. No chains are broken, no rivers crossed, no
+                    sentencess spoken...</div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- WHY TFHK RABODI OVA DOLE AKSA? FFFFFF -->
+    </div>
+    <!--  -->
+
+
+    <div class="end-container">
+        <div class="end-logo-text">distorzija.mk</div>
+        <div class="end-logo-year">2019-2020</div>
+        <svg height=" 5%" viewBox="0 0 511 511.9" width="5%" xmlns="http://www.w3.org/2000/svg" class="icons"
+            style="right: 6vw;" onclick="openLink('https://www.instagram.com/distorzija.mk/')">
+            <path
+                d="m510.949219 150.5c-1.199219-27.199219-5.597657-45.898438-11.898438-62.101562-6.5-17.199219-16.5-32.597657-29.601562-45.398438-12.800781-13-28.300781-23.101562-45.300781-29.5-16.296876-6.300781-34.898438-10.699219-62.097657-11.898438-27.402343-1.300781-36.101562-1.601562-105.601562-1.601562s-78.199219.300781-105.5 1.5c-27.199219 1.199219-45.898438 5.601562-62.097657 11.898438-17.203124 6.5-32.601562 16.5-45.402343 29.601562-13 12.800781-23.097657 28.300781-29.5 45.300781-6.300781 16.300781-10.699219 34.898438-11.898438 62.097657-1.300781 27.402343-1.601562 36.101562-1.601562 105.601562s.300781 78.199219 1.5 105.5c1.199219 27.199219 5.601562 45.898438 11.902343 62.101562 6.5 17.199219 16.597657 32.597657 29.597657 45.398438 12.800781 13 28.300781 23.101562 45.300781 29.5 16.300781 6.300781 34.898438 10.699219 62.101562 11.898438 27.296876 1.203124 36 1.5 105.5 1.5s78.199219-.296876 105.5-1.5c27.199219-1.199219 45.898438-5.597657 62.097657-11.898438 34.402343-13.300781 61.601562-40.5 74.902343-74.898438 6.296876-16.300781 10.699219-34.902343 11.898438-62.101562 1.199219-27.300781 1.5-36 1.5-105.5s-.101562-78.199219-1.300781-105.5zm-46.097657 209c-1.101562 25-5.300781 38.5-8.800781 47.5-8.601562 22.300781-26.300781 40-48.601562 48.601562-9 3.5-22.597657 7.699219-47.5 8.796876-27 1.203124-35.097657 1.5-103.398438 1.5s-76.5-.296876-103.402343-1.5c-25-1.097657-38.5-5.296876-47.5-8.796876-11.097657-4.101562-21.199219-10.601562-29.398438-19.101562-8.5-8.300781-15-18.300781-19.101562-29.398438-3.5-9-7.699219-22.601562-8.796876-47.5-1.203124-27-1.5-35.101562-1.5-103.402343s.296876-76.5 1.5-103.398438c1.097657-25 5.296876-38.5 8.796876-47.5 4.101562-11.101562 10.601562-21.199219 19.203124-29.402343 8.296876-8.5 18.296876-15 29.398438-19.097657 9-3.5 22.601562-7.699219 47.5-8.800781 27-1.199219 35.101562-1.5 103.398438-1.5 68.402343 0 76.5.300781 103.402343 1.5 25 1.101562 38.5 5.300781 47.5 8.800781 11.097657 4.097657 21.199219 10.597657 29.398438 19.097657 8.5 8.300781 15 18.300781 19.101562 29.402343 3.5 9 7.699219 22.597657 8.800781 47.5 1.199219 27 1.5 35.097657 1.5 103.398438s-.300781 76.300781-1.5 103.300781zm0 0" />
+            <path
+                d="m256.449219 124.5c-72.597657 0-131.5 58.898438-131.5 131.5s58.902343 131.5 131.5 131.5c72.601562 0 131.5-58.898438 131.5-131.5s-58.898438-131.5-131.5-131.5zm0 216.800781c-47.097657 0-85.300781-38.199219-85.300781-85.300781s38.203124-85.300781 85.300781-85.300781c47.101562 0 85.300781 38.199219 85.300781 85.300781s-38.199219 85.300781-85.300781 85.300781zm0 0" />
+            <path
+                d="m423.851562 119.300781c0 16.953125-13.746093 30.699219-30.703124 30.699219-16.953126 0-30.699219-13.746094-30.699219-30.699219 0-16.957031 13.746093-30.699219 30.699219-30.699219 16.957031 0 30.703124 13.742188 30.703124 30.699219zm0 0" />
+        </svg>
+
+        <svg id="Bold" enable-background="new 0 0 24 24" height="5%" viewBox="0 0 24 24" width="5%" class="icons"
+            style="right: 2vw;" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+        </svg>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function onClick(s) {
+        window.location.href = s + ".html";
+    }
+    $(document).ready(function () {
+        $('#body').show();
+    });
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+
+</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winter is Cool</title>
+<link rel="stylesheet" href="./assets/style.css">
+
+
+<body onload="showLoaded()">
+
+    <header onmousedown="return false" class="header">
+
+        <img src="./assets/images/mountain.png" class="mountain-img translate" data-speed="0.4">
+        <img src="./assets/images/left.png" class="left-img translate" data-speed="-0.1">
+        <img src="./assets/images/right.png" class="right-img translate" data-speed="-0.1">
+        <img src="./assets/images/rightclose.png" class="rightclose-img translate" data-speed="-0.1">
+        <img src="./assets/images/boardguyy.png" class="boardguy-img" data-speed="0.3" id="boardguy-img">
+        <img src="./assets/images/sky.png" class="sky-img translate" data-speed="0.4">
+        <div class="shadow"></div>
+        <div class="menu-overlay">
+            <div class="menu-h1">
+                Menu
+            </div>
+            <div class="menu-el">
+                Home
+            </div>
+            <div class="menu-el">
+                Boards
+            </div>
+            <div class="menu-el">
+                Videos
+            </div>
+            <div class="menu-el">
+                Find out more!
+            </div>
+            <div class="social-media-i">
+                <img src="./assets/svg/facebook.svg" width="30vm" class="icon-i">
+                <img src="./assets/svg/instagram.svg" width="30vm" class="icon-i">
+            </div>
+        </div>
+        <div class="loading">
+            <div class="loading-item"></div>
+            <div style="color:white; position: absolute; right: 7vw; bottom: 4vh; font-size:2vw; font-family: Ruso;">
+                Loading..</div>
+        </div>
+        <div class="top-menu" onclick="menuMutate()">
+            <div class="menu-line" id="ml1"></div>
+            <div class="menu-line" id="ml2"></div>
+            <div class="menu-line" id="ml3"></div>
+
+        </div>
+    </header>
+
+    <div style="height: 100vh; width: 100vw; background-color:black;">
+        <div class="logo">v.iv</div>
+    </div>
+</body>
+
+<script src="./scripts/script.js"></script>
