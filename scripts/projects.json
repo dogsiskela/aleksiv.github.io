@@ -3,21 +3,21 @@
         "type": "UI/UX Portfolio",
         "projects": [
             {
-                "title": "Project ABC",
+                "title": "Livid",
                 "description": "test",
-                "image": "./assets/images/wireframe.jpg",
+                "image": "./assets/projects/ui/livid.png",
                 "link": "project.html"
             },
             {
-                "title": "Project Ned",
+                "title": "Clean Boost",
                 "description": "test",
-                "image": "./assets/images/wireframe.jpg",
+                "image": "./assets/projects/ui/cleanboost.png",
                 "link": "project.html"
             },
             {
-                "title": "Project Flanders",
+                "title": "Distorzija",
                 "description": "test",
-                "image": "./assets/images/wireframe.jpg",
+                "image": "./assets/projects/ui/distorzija.png",
                 "link": "project.html"
             }
         ]
@@ -26,21 +26,21 @@
         "type": "App Projects",
         "projects": [
             {
-                "title": "App Project ABC",
+                "title": "SpeakOut",
                 "description": "test",
-                "image": "./assets/images/phone.png",
+                "image": "./assets/projects/app/speakout.png",
                 "link": "project.html"
             },
             {
-                "title": "App Project Ned",
+                "title": "Laavaan",
                 "description": "test",
-                "image": "./assets/images/phone.png",
+                "image": "./assets/projects/app/laavaan.png",
                 "link": "project.html"
             },
             {
-                "title": "App Project Flanders",
+                "title": "Recycling",
                 "description": "test",
-                "image": "./assets/images/phone.png",
+                "image": "./assets/projects/app/recycle.png",
                 "link": "project.html"
             }
         ]
@@ -49,21 +49,21 @@
         "type": "Web Projects",
         "projects": [
             {
-                "title": "Web Project ABC",
+                "title": "SpeakOut Volunteer Dashboard",
                 "description": "test",
-                "image": "./assets/images/web.jpg",
+                "image": "./assets/projects/web/speakoutvolunteer.png",
                 "link": "project.html"
             },
             {
-                "title": "Web Project Ned",
+                "title": "Andrometa NGO",
                 "description": "test",
-                "image": "./assets/images/web.jpg",
+                "image": "./assets/projects/web/andrometa.png",
                 "link": "project.html"
             },
             {
-                "title": "Web Project Flanders",
+                "title": "Laavaan",
                 "description": "test",
-                "image": "./assets/images/web.jpg",
+                "image": "./assets/projects/web/djangoforum.png",
                 "link": "project.html"
             }
         ]

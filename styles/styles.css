@@ -227,7 +227,8 @@ h6 {
     position: absolute;
     height: 400px;
     width: 280px;
-    background: url(../assets/4da60f49391267.560858037e145.png);
+    background-position: center;
+    object-fit: contain;
     border-radius: 20px;
     background-color: #E2B22D;
     box-shadow: 5px 15px 20px rgb(26, 26, 26);
