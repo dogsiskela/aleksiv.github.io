@@ -107,6 +107,7 @@ h6 {
     margin-top: 20px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .menu-item {
@@ -228,7 +229,7 @@ h6 {
 .main-container .right .technologies-container {
     padding-top: 20px;
     display: grid;
-    grid-template-columns: 150px repeat(20, 100px);
+    grid-template-columns: 150px repeat(20, 70px);
     gap: 0 20px;
 
 }

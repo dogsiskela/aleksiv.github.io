@@ -7,6 +7,7 @@ var imageIndex = 0;
 var descriptionElement;
 var titleElement;
 var imageElement;
+var technologiesElement;
 
 var leftImageCarousselButton;
 var rightImageCarousselButton
@@ -16,10 +17,17 @@ function updateImageState() {
     imageElement.src = images[imageIndex];
 }
 
+function createTechnologyElement(technology) {
+    let element = document.createElement('img');
+    element.src = "/assets/svg/technologies/" + technology + ".svg";
+    return element;
+}
+
 window.onload = async () => {
     descriptionElement = document.getElementById("description");
     titleElement = document.getElementById("title");
     imageElement = document.getElementById("image");
+    technologiesElement = document.getElementById("technologies");
 
     leftImageCarousselButton = document.getElementById("caret-left");
     rightImageCarousselButton = document.getElementById("caret-right");
@@ -60,5 +68,10 @@ window.onload = async () => {
     titleElement.innerHTML = projectData["title"];
     images = projectData["images"];
     imageElement.src = images[0];
+
+    let technologies = projectData["technologies"]
+    technologies.forEach((tech) => {
+        technologiesElement.appendChild(createTechnologyElement(tech))
+    })
 
 }
