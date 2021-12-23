@@ -80,21 +80,31 @@
         "projects": [
             {
                 "id": "speakout_volunteer_dashboard",
-                "title": "SpeakOut Volunteer Dashboard",
-                "description": "test",
-                "image": "./assets/projects/web/speakoutvolunteer.png"
+                "title": "Speakout Volunteer Dashboard",
+                "description": "Web dashboard for the volunteers utilizing matrix.org. The main goal of this website is to create access for the volunteers to chat to the users through the web.",
+                "image": "./assets/projects/web/speakoutvolunteer.png",
+                "images": [
+                    "/assets/projects/web/speakout_volunteer_dashboard/1.png"
+                ]
             },
             {
                 "id": "andrometa_ngo",
                 "title": "Andrometa NGO",
-                "description": "test",
-                "image": "./assets/projects/web/andrometa.png"
+                "description": "Website for the Andromete NGO with an unique design.",
+                "image": "./assets/projects/web/andrometa.png",
+                "images": [
+                    "/assets/projects/web/andrometa_ngo/1.png",
+                    "/assets/projects/web/andrometa_ngo/2.png"
+                ]
             },
             {
                 "id": "django_forum",
                 "title": "Django Forum",
-                "description": "test",
-                "image": "./assets/projects/web/djangoforum.png"
+                "description": "Django mentorship and forum website.<br> - Create and modify profile. <br> - Add and preview mentors. <br> - Custom blogs. <br> - Custom forum categories and posts. ",
+                "image": "./assets/projects/web/djangoforum.png",
+                "images": [
+                    "/assets/projects/web/django_forum/1.png"
+                ]
             }
         ]
     }
