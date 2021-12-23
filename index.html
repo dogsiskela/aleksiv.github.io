@@ -14,16 +14,21 @@
     <div class="menu">
         <div class="logo-i"> <img src="./assets/1v.ivlogo.svg" width="150px" class="logo-i"></div>
         <div class="menu-items">
-            <div class="menu-item" onclick="transitionListener(this)"> <img src="./assets/svg/menu/bi_phone.svg"
-                    width="25px" class="laptop-i"></div>
-            <div class="menu-item" onclick="transitionListener(this)"> <img
-                    src="./assets/svg/menu/fluent_web-asset-24-regular.svg" width="25px" class="phone-i"></div>
-            <div class="menu-item" onclick="transitionListener(this)"> <img
-                    src="./assets/svg/menu/fluent_design-ideas-24-regular.svg" width="25px" class="laptop-i"></div>
-            <div class="menu-item" onclick="transitionListener(this)"> <img src="./assets/svg/menu/carbon_tools.svg"
-                    width="25px" class="phone-i"></div>
-            <div class="menu-item" onclick="transitionListener(this)"> <img
-                    src="./assets/svg/menu/ant-design_message-outlined.svg" width="25px" class="phone-i"></div>
+            <div class="menu-item" id="menu-mobile">
+                <img src="./assets/svg/menu/bi_phone.svg" width="25px" class="laptop-i">
+            </div>
+            <div class="menu-item" id="menu-web">
+                <img src="./assets/svg/menu/fluent_web-asset-24-regular.svg" width="25px" class="phone-i">
+            </div>
+            <div class="menu-item" id="menu-design">
+                <img src="./assets/svg/menu/fluent_design-ideas-24-regular.svg" width="25px" class="laptop-i">
+            </div>
+            <div class="menu-item" id="menu-tech">
+                <img src="./assets/svg/menu/carbon_tools.svg" width="25px" class="phone-i">
+            </div>
+            <div class="menu-item" id="menu-contact">
+                <img src="./assets/svg/menu/ant-design_message-outlined.svg" width="25px" class="phone-i">
+            </div>
         </div>
     </div>
 
@@ -67,7 +72,7 @@
                 <div class="line"></div>
             </div>
         </div>
-        <div class="technologies-container">
+        <div class="technologies-container" id="technologies_container">
             <img src="./assets/svg/technologies/html.svg" class="filled">
             <img src="./assets/svg/technologies/css.svg" class="filled">
             <img src="./assets/svg/technologies/js.svg" class="filled">
@@ -79,7 +84,7 @@
         </div>
 
         <!-- CONTACT -->
-        <div class="contact-container">
+        <div class="contact-container" id="contact_container">
             <div class="bubble-left">
                 <h6>Say Hi!</h6>
                 <div class="bubble">

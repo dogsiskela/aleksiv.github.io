@@ -3,6 +3,12 @@ var portfolioContainer
 var caretLeft;
 var caretRight;
 
+var menuMobile;
+var menuWeb;
+var menuDesign;
+var menuTech;
+var menuContact;
+
 
 var jsonData;
 
@@ -28,10 +34,13 @@ window.onload = async function () {
 
 
     await getPortfolio(0);
-
     addCaretClickListeners();
-
+    addMenuClickListeners();
 }
+
+
+
+
 
 function addCaretClickListeners() {
     caretLeft.addEventListener('click', () => {
@@ -49,7 +58,6 @@ function addCaretClickListeners() {
 }
 
 async function getPortfolio(portfolioIndex) {
-    // Remove all children
     while (portfolioContainer.firstChild) {
         portfolioContainer.removeChild(portfolioContainer.firstChild);
     }
@@ -119,4 +127,45 @@ function reverseAnimWeb(item) {
     cardDescription.style.opacity = "0";
 
     revealElement.style.height = "100px";
+}
+
+function addMenuClickListeners() {
+    menuMobile = document.getElementById("menu-mobile");
+    menuWeb = document.getElementById("menu-web");
+    menuDesign = document.getElementById("menu-design");
+    menuTech = document.getElementById("menu-tech");
+    menuContact = document.getElementById("menu-contact");
+
+    portfolioContainer = document.getElementById("portfolio_container");
+    technologiesContainer = document.getElementById("technologies_container");
+    contactContainer = document.getElementById("contact_container");
+
+    menuDesign.addEventListener("click", () => {
+        portfolioContainer.scrollIntoView({ behavior: "smooth", block: "center", });
+        if (portfolioIndex !== 0) {
+            portfolioIndex = 0;
+            getPortfolio(portfolioIndex);
+        }
+    });
+    menuMobile.addEventListener("click", () => {
+        portfolioContainer.scrollIntoView({ behavior: "smooth", block: "center", });
+        if (portfolioIndex !== 1) {
+            portfolioIndex = 1;
+            getPortfolio(portfolioIndex);
+        }
+    });
+    menuWeb.addEventListener("click", () => {
+        portfolioContainer.scrollIntoView({ behavior: "smooth", block: "center", });
+        if (portfolioIndex !== 2) {
+            portfolioIndex = 2;
+            getPortfolio(portfolioIndex);
+        }
+    });
+    menuTech.addEventListener("click", () => {
+        technologiesContainer.scrollIntoView({ behavior: "smooth", block: "center", });
+    });
+    menuContact.addEventListener("click", () => {
+        contactContainer.scrollIntoView({ behavior: "smooth", block: "center", });
+    });
+
 }
