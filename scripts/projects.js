@@ -61,7 +61,7 @@ async function getPortfolio(portfolioIndex) {
             for (let i = 0; i < json[portfolioIndex]["projects"].length; i++) {
                 let projectTitle = json[portfolioIndex]["projects"][i]["title"];
                 let projectImage = json[portfolioIndex]["projects"][i]["image"];
-                let projectLink = json[portfolioIndex]["projects"][i]["link"];
+                let projectLink = "./projects/" + json[portfolioIndex]["id"] + "/" + json[portfolioIndex]["projects"][i]["id"] + ".html";
                 portfolioContainer.appendChild(getPortfolioElement(projectTitle, projectImage, projectLink),);
                 addListeners(portfolioContainer.children[i]);
             }

@@ -1,70 +1,100 @@
 [
     {
+        "id": "ui_ux",
         "type": "UI/UX Portfolio",
         "projects": [
             {
+                "id": "livid",
                 "title": "Livid",
-                "description": "test",
+                "description": "Livid was a project for a web and mobile UI designs of a progress tracking app. The aim was to create a minimalistic interface for the user as well as a onboarding page.",
                 "image": "./assets/projects/ui/livid.png",
-                "link": "./projects/livid.html"
+                "images": [
+                    "/assets/projects/ui/livid/1.png",
+                    "/assets/projects/ui/livid/2.png",
+                    "/assets/projects/ui/livid/3.png"
+                ]
             },
             {
+                "id": "clean_boost",
                 "title": "Clean Boost",
-                "description": "test",
+                "description": "UI interface and Android dummy app for CleanBoost. The UI design was based on the Neumorphism principles.",
                 "image": "./assets/projects/ui/cleanboost.png",
-                "link": "./projects/cleanboost.html"
+                "images": [
+                    "/assets/projects/ui/clean_boost/1.png",
+                    "/assets/projects/ui/clean_boost/2.png"
+                ]
             },
             {
+                "id": "distorzija",
                 "title": "Distorzija",
-                "description": "test",
+                "description": "Distorzija was a personal hobby project, an online place for music enthusiasts.",
                 "image": "./assets/projects/ui/distorzija.png",
-                "link": "./projects/distorzija.html"
+                "images": [
+                    "/assets/projects/ui/distorzija/1.png",
+                    "/assets/projects/ui/distorzija/2.png"
+                ]
             }
         ]
     },
     {
+        "id": "apps",
         "type": "App Projects",
         "projects": [
             {
+                "id": "speakout",
                 "title": "SpeakOut",
-                "description": "test",
+                "description": "SpeakOut is a youth-to-youth mental health aplication based in Macedonia. The accomplished tasks for the project were:<br><br> - UI/UX plan and prototype<br> - Hybrid application in Flutter<br> - Instagram posts and promotional material",
                 "image": "./assets/projects/app/speakout.png",
-                "link": "./projects/speakout.html"
+                "images": [
+                    "/assets/projects/app/speakout/1.png",
+                    "/assets/projects/app/speakout/2.png",
+                    "/assets/projects/app/speakout/3.png"
+                ]
             },
             {
+                "id": "laavaan",
                 "title": "Laavaan",
-                "description": "test",
+                "description": "Laavaan is a dating platform that allows South Asian singles to form meaningful connections in a variety of ways. <br><br> Worked on the app development in Flutter, backend in Firebase, an onboarding registration website and UI improvements for the app. ",
                 "image": "./assets/projects/app/laavaan.png",
-                "link": "./projects/laavaan.html"
+                "images": [
+                    "/assets/projects/app/laavaan/1.png",
+                    "/assets/projects/app/laavaan/2.png"
+                ]
             },
             {
+                "id": "recycling",
                 "title": "Recycling",
-                "description": "test",
+                "description": "Recycling was a hackathon Android application for logging recying history and showing the user locations to recycle.<br><br> The functionalities are:<br> - Collection of the user's history of recycling in local storage.<br> - Locations on the local map of every recycling location fetched from the local recycling organization.<br> - History of the user's recyling habit.<br><br> Further improvements were made with a Django GraphQL backend and Figma redesign. ",
                 "image": "./assets/projects/app/recycle.png",
-                "link": "./projects/recycling.html"
+                "images": [
+                    "/assets/projects/app/recycling/1.png",
+                    "/assets/projects/app/recycling/2.png",
+                    "/assets/projects/app/recycling/3.png"
+                ]
             }
         ]
     },
     {
+        "id": "websites",
         "type": "Web Projects",
         "projects": [
             {
+                "id": "speakout_volunteer_dashboard",
                 "title": "SpeakOut Volunteer Dashboard",
                 "description": "test",
-                "image": "./assets/projects/web/speakoutvolunteer.png",
-                "link": "./projects/speakout_volunteer_dashboard.html"
+                "image": "./assets/projects/web/speakoutvolunteer.png"
             },
             {
+                "id": "andrometa_ngo",
                 "title": "Andrometa NGO",
                 "description": "test",
-                "image": "./assets/projects/web/andrometa.png",
-                "link": "./projects/andrometa_ngo.html"
+                "image": "./assets/projects/web/andrometa.png"
             },
             {
+                "id": "django_forum",
                 "title": "Django Forum",
                 "description": "test",
-                "image": "./assets/projects/web/djangoforum.png",
-                "link": "./projects/django_forum.html"
+                "image": "./assets/projects/web/djangoforum.png"
             }
         ]
     }
