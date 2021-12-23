@@ -1,0 +1,234 @@
+@font-face {
+    font-family: LondarinaL;
+    src: url("./../assets/fonts/LondrinaSolid-Light.ttf");
+}
+
+@font-face {
+    font-family: LondarinaR;
+    src: url("./../assets/fonts/LondrinaSolid-Regular.ttf");
+}
+
+@font-face {
+    font-family: LondarinaB;
+    src: url("./../assets/fonts/LondrinaSolid-Black.ttf");
+}
+
+@font-face {
+    font-family: RobotoB;
+    src: url("./../assets/fonts/Roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: RobotoL;
+    src: url("./../assets/fonts/Roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+    font-family: RobotoR;
+    src: url("./../assets/fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: RobotoB;
+    src: url("./../assets/fonts/Roboto/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: RobotoT;
+    src: url("./../assets/fonts/Roboto/Roboto-Thin.ttf");
+}
+
+*::-webkit-scrollbar {
+    width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #37392E;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #eb8d45;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(245, 245, 245, 0.452);
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #212121;
+    /* overflow: hidden; */
+}
+
+body {
+    /* background-image: url("../assets/background.png"); */
+    background-position: center;
+    background-size: contain;
+}
+
+p {
+    color: whitesmoke;
+    font-family: RobotoT;
+    font-size: 18px;
+}
+
+h5 {
+    color: whitesmoke;
+    margin: 0;
+    font-family: RobotoB;
+    font-size: 40px;
+    font-weight: 200;
+}
+
+h6 {
+    color: whitesmoke;
+    margin: 0;
+    font-family: RobotoL;
+    font-size: 30px;
+    font-weight: 200;
+}
+
+/* ===================== MENU ============================= */
+
+.menu {
+    height: 100vh;
+    width: 100px;
+    position: fixed;
+    display: block;
+    /* background-color: whitesmoke; */
+    /* box-shadow: 5px 0px 20px black; */
+    text-align: center;
+}
+
+.logo-i {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-item {
+    font-size: 19px;
+    color: whitesmoke;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0 100px 100px 0;
+}
+
+.menu-item:hover {
+    background-color: rgba(245, 245, 245, 0.062);
+    font-style: italic;
+}
+
+.main-containers {
+    margin-left: 100px;
+}
+
+
+
+.main-container {
+    height: 80vh;
+    width: 90vw;
+    padding-top: 10vh;
+    padding-left: 10vw;
+    display: grid;
+    grid-template-columns: 30vw 60vw;
+    grid-template-rows: auto;
+}
+
+.main-container .left {
+    padding-top: 100px;
+    width: 25vw;
+}
+
+.main-container .right h6 {
+    padding: 20px 0 20px 0;
+}
+
+.main-container .right .image {
+    width: 900px;
+    height: 60vh;
+    position: relative;
+    object-fit: contain;
+    border: 1px solid white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.main-container .right .image .nav-left {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 60vh;
+    background-color: rgba(255, 255, 255, 0.082);
+    align-items: center;
+    justify-content: center;
+    user-select:none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-container .right .image .nav-left:hover {
+    background-color: rgba(255, 255, 255, 0.116);
+    transition: 0.3s;
+}
+
+.main-container .right .image .nav-left img {
+    padding: 0px;
+    margin: 0px;
+    height: 20px;
+    width: 20px;
+}
+
+.main-container .right .image .nav-right {
+    position: absolute;
+    display: flex;
+    width: 50px;
+    height: 60vh;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.082);
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select:none;
+    transition: 0.3s;
+}
+
+.main-container .right .image .nav-right:hover {
+    background-color: rgba(255, 255, 255, 0.116);
+    transition: 0.3s;
+}
+
+.main-container .right .image .nav-right img {
+    padding: 0px;
+    margin: 0px;
+    height: 20px;
+    width: 20px;
+}
+
+
+.main-container .right .image img {
+    width: 700px;
+    height: 60vh;
+    margin-left: 100px;
+    object-fit: contain;
+}
+
+
+
+
+.main-container .right .technologies-container img {
+    height: 50px;
+    width: 50px;
+}
+
+.main-container .right .technologies-container {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 150px repeat(20, 100px);
+    gap: 0 20px;
+
+}
