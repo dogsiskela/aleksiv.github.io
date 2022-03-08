@@ -1,5 +1,5 @@
 var portfolioTitle;
-var portfolioContainer
+var portfolioContainer;
 var caretLeft;
 var caretRight;
 
@@ -9,10 +9,11 @@ var menuDesign;
 var menuTech;
 var menuContact;
 
-
+var portfolioHrefLink;
 var jsonData;
 
 var portfolioIndex = 0;
+
 
 function getPortfolioElement(projectName, imageSrc, projectLink) {
     var innerHtml = '<div class="bolt-container bolt-animated" ><img src="./assets/bolt_dark.svg" height="60px" class="filled"><img src="./assets/bolt_outline.svg" height="60px" class="outlined"><div class="reveal"></div></div><div class="category-info">' + projectName + '</div><div class="card-front"></div>'
@@ -31,6 +32,7 @@ window.onload = async function () {
     portfolioContainer = document.getElementById("portfolio_container");
     caretLeft = document.getElementById("caret-left");
     caretRight = document.getElementById("caret-right");
+    portfolioHrefLink = document.getElementById('portfolio_a');
 
 
     await getPortfolio(0);
@@ -57,6 +59,7 @@ function addCaretClickListeners() {
     });
 }
 
+
 async function getPortfolio(portfolioIndex) {
     while (portfolioContainer.firstChild) {
         portfolioContainer.removeChild(portfolioContainer.firstChild);
@@ -66,6 +69,7 @@ async function getPortfolio(portfolioIndex) {
         return val.json().then((json) => {
             jsonData = json;
             portfolioTitle.innerHTML = json[portfolioIndex]["type"];
+            portfolioHrefLink.href = "/" + json[portfolioIndex]["link"] + ".html"
             for (let i = 0; i < json[portfolioIndex]["projects"].length; i++) {
                 let projectTitle = json[portfolioIndex]["projects"][i]["title"];
                 let projectImage = json[portfolioIndex]["projects"][i]["image"];
@@ -84,7 +88,6 @@ async function getPortfolio(portfolioIndex) {
             portfolioContainer.children[i].style.opacity = "1";
         }, (i + 1) * 100)
     }
-
 }
 
 function addListeners(item) {

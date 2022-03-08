@@ -1,6 +1,7 @@
 [
     {
         "id": "ui_ux",
+        "link": "uiux",
         "type": "UI/UX Portfolio",
         "projects": [
             {
@@ -53,6 +54,7 @@
     },
     {
         "id": "apps",
+        "link": "mobile",
         "type": "App Projects",
         "projects": [
             {
@@ -115,6 +117,7 @@
     },
     {
         "id": "websites",
+        "link": "web",
         "type": "Web Projects",
         "projects": [
             {

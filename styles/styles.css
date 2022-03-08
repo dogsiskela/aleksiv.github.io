@@ -63,6 +63,9 @@ html, body {
     scroll-behavior: smooth;
 }
 
+a{
+    text-decoration: none;
+}
 body {
     /* background-image: url("../assets/background.png"); */
     background-position: center;
@@ -164,7 +167,7 @@ h6 {
 .content-header {
     display: grid;
     margin-top: 70px;
-    grid-template-rows: 80px 10px;
+    grid-template-rows: 100px 10px;
     position: relative;
     justify-content: center;
     text-align: center;
@@ -201,6 +204,10 @@ h6 {
 
 .navigation-header h5 {
     line-height: 25px;
+}
+
+.portfolio-title {
+    cursor: pointer;
 }
 
 /* ========================== CATEGORY CONTAINER =================== */
