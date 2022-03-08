@@ -63,9 +63,10 @@ html, body {
     scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
 }
+
 body {
     /* background-image: url("../assets/background.png"); */
     background-position: center;
@@ -83,7 +84,7 @@ h5 {
     color: whitesmoke;
     margin: 0;
     font-family: RobotoB;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 200;
 }
 
@@ -93,6 +94,21 @@ h6 {
     font-family: RobotoL;
     font-size: 30px;
     font-weight: 200;
+}
+
+@media screen and (max-width:800px) {
+    h5{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    h5{
+        font-size: 20px;
+    }
+    h6{
+        font-size: 20px;
+    }
 }
 
 /* ===================== MENU ============================= */
@@ -162,6 +178,12 @@ h6 {
     width: 30vw;
 }
 
+@media screen and (max-width:1000px) {
+    .animated-content{
+        display: none;
+    }
+}
+
 /* ========================== CONTENT GENERICS  =================== */
 
 .content-header {
@@ -175,11 +197,11 @@ h6 {
 
 .content-header .divider {
     display: grid;
-    grid-template-columns: 10vw 6vw 10vw;
+    grid-template-columns: 120px 6vw 120px;
 }
 
 .content-header .divider .line {
-    width: 10vw;
+    width: 120px;
     height: 1px;
     background-color: whitesmoke;
 }
@@ -208,6 +230,11 @@ h6 {
 
 .portfolio-title {
     cursor: pointer;
+}
+
+@media screen and (max-width:100px) {
+
+    
 }
 
 /* ========================== CATEGORY CONTAINER =================== */
@@ -312,6 +339,17 @@ h6 {
     }
 }
 
+@media screen and (max-width:1100px) {
+    .niche-items{
+        grid-template-columns: 300px;
+        grid-template-rows: auto auto auto;
+    }
+    .niche-items{
+        height: 1600px;
+    }
+    
+}
+
 /* =================== TECHNOLOGIES ================================ */
 
 .technologies-container {
@@ -327,6 +365,31 @@ h6 {
 .technologies-container img {
     width: 8vw;
 }
+
+@media screen and (max-width:900px) {
+    .technologies-container {
+        grid-template-columns: 10vw 10vw 10vw;
+        grid-template-rows: auto auto auto;
+        gap: 20px 100px;
+    }
+
+    .technologies-container img {
+        width: 10vw;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .technologies-container {
+        grid-template-columns: 20vw 20vw;
+        grid-template-rows: auto auto auto auto;
+        gap: 20px 100px;
+    }
+
+    .technologies-container img {
+        width: 20vw;
+    }
+}
+
 
 /* =================== CONTACT ================================ */
 
@@ -348,7 +411,6 @@ h6 {
 
 .bubble h5 {
     color: #212121;
-    font-size: 30px;
 }
 
 .contact-container .bubble-left h6 {
@@ -384,6 +446,41 @@ h6 {
     right: 200px;
     background-color: #E2B22D;
     border-radius: 70px 0 70px 70px;
+}
+
+@media screen and (max-width:1000px) {
+    .contact-container .bubble-left .bubble {
+        width: 60vw;
+        left: 50px;
+    }
+    .contact-container .bubble-right .bubble{
+        width: 60vw;
+        right: 50px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .contact-container .bubble-left .bubble {
+        width: 70vw;
+        left: 20px;
+    }
+    .contact-container .bubble-right .bubble{
+        width: 70vw;
+        right: 20px;
+    }
+    .bubble{
+        height: 100px;
+        grid-template-columns: 70px auto;
+    }
+    .bubble img {
+        width: 50px;
+    }
+    .contact-container .bubble-left .bubble{
+        height: 100px;
+    }
+    .contact-container .bubble-right .bubble{
+        height: 100px;
+    }
 }
 
 /* =================== FOOTER ================================ */
